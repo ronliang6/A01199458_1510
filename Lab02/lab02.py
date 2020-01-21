@@ -1,9 +1,16 @@
+"""
+Functions to randomly generate numbers and strings.
+"""
 import random
 import string
 
 
 def create_name(length):
-    """Generate a title case string of random letters of a given length and return none if given a non-whole-number."""
+    """Generate a title case string of random letters of a given length and return none if given a non-whole-number.
+
+    :param length: a positive integer
+    :return: if length is not a positive integer, return None, otherwise return a random string of length length
+    """
 
     if str.isdigit(str(length)):
         random_string = ""
@@ -19,6 +26,8 @@ def roll_die():
 
     If either parameter is less than one, return 0. If not, then randomly select an integer within the range [1,
     number_of_sides] a number of times equal to number_of_rolls, and then return that result.
+
+    :return: return 0 if inputs are not positive integers, else return the sum.
     """
 
     print("Welcome to my dice rolling program! You can enter the number of dice that you are rolling as well as how "
@@ -49,6 +58,4 @@ def main():
 
 
 if __name__ == "__main__":
-    """Call the main method if this is the main program."""
-
     main()

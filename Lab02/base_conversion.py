@@ -1,11 +1,16 @@
+"""
+Functions to convert a base 10 number to a number in a different base.
+"""
+
+
 def calculate_new_number():
     """Convert a base 10 number to another base in the range [2, 9].
 
     Takes in an input as the destination base and calculates the maximum base-10 number possible to convert. Also
     takes in an input as a base ten number that will be converted to a 4bit number of the destination base. Call
-    calculate_digit to calculate the remainder, then format and insert that digit as the first index of a
-    list. Call calculate_quotient to calculate the quotient to continue calculating the next digits. Repeat until
-    four digits have been entered into the list. Concatenate each digit in list into the new number and return it.
+    other functions to calculate each digit and insert that into a list. Concatenate the list into a single string
+    and return it.
+    :return: the converted number
     """
 
     destination_base = int(input("Please enter the base destination, a number between 2 and 9, inclusive"))
@@ -33,12 +38,22 @@ def calculate_new_number():
 
 
 def calculate_digit(dividend, divisor):
-    """Calculate the modulus of two numbers."""
+    """Calculate the modulus of two numbers.
+
+    :param dividend: a number
+    :param divisor: a number
+    :return: the result of dividend modulus divisor
+    """
     return dividend % divisor
 
 
 def calculate_quotient(dividend, divisor):
-    """Calculate the quotient of two numbers."""
+    """Calculate the quotient of two numbers.
+
+    :param dividend: a number
+    :param divisor: a number
+    :return: the result of dividend integer-division divisor
+    """
     return dividend // divisor
 
 
@@ -49,6 +64,4 @@ def main():
 
 
 if __name__ == "__main__":
-    """Call the main method if this is the main program."""
-
     main()

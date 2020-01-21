@@ -1,3 +1,8 @@
+"""
+Create a variety of errors.
+"""
+
+
 def main():
     """Generate a ZeroDivisionError, two IndexErrors, and two TypeErrors."""
 
@@ -12,6 +17,4 @@ def main():
 
 
 if __name__ == "__main__":
-    """Call the main method if this is the main program."""
-
     main()
