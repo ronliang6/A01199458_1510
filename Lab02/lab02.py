@@ -1,22 +1,42 @@
 """
 Functions to randomly generate numbers and strings.
 """
+
 import random
 import string
 
 
-def create_name(length):
-    """Generate a title case string of random letters of a given length and return none if given a non-whole-number.
+def positive_integer_test(test):
+    """Determine if a string is a positive integer.
 
-    :param length: a positive integer
-    :return: if length is not a positive integer, return None, otherwise return a random string of length length
+    :param test: a string
+    :return: if test is a positive integer, return True, otherwise return False.
     """
 
-    if str.isdigit(str(length)):
-        random_string = ""
-        for x in range(int(length)):
+    if str.isdigit(str(test)):
+        if int(test) > 0:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
+def create_name(length, random_string):
+    """
+    Create a title-cased string of random letters of a given length.
+
+    :param length: a positive integer
+    :param random_string: a string
+    :return: a string
+    """
+    if positive_integer_test(length):
+
+        if len(random_string) < length:
             random_string += random.choice(string.ascii_letters)
-        return random_string.title()
+            return create_name(length, random_string)
+        else:
+            return random_string.title()
     else:
         return None
 
@@ -24,8 +44,8 @@ def create_name(length):
 def roll_die():
     """ Calculate a sum, randomly selecting integers within a inputted range an inputted number of times.
 
-    If either parameter is less than one, return 0. If not, then randomly select an integer within the range [1,
-    number_of_sides] a number of times equal to number_of_rolls, and then return that result.
+    Rolls a given number of dice with a given number of sides. If either given number is not a positive integer,
+    return 0.
 
     :return: return 0 if inputs are not positive integers, else return the sum.
     """
@@ -35,15 +55,27 @@ def roll_die():
     number_of_rolls = input("Please enter the number of dice that you wish to roll")
     number_of_sides = input("Please enter the number of sides that you wish your dice to have")
 
-    if int(number_of_rolls) > 0 and int(number_of_sides) > 0:
+    return die_roller(number_of_rolls, number_of_sides, 0, 0)
 
-        sum_of_rolls = 0
 
-        for x in range(int(number_of_rolls)):
+def die_roller(number_of_rolls, number_of_sides, sum_of_rolls, rolled_dice):
+    """
+    Roll dice with a given number of sides randomly, a given number of times and return that number.
+
+    :param number_of_rolls: an integer
+    :param number_of_sides: an integer
+    :param sum_of_rolls: an integer that sums the dice rolls
+    :param rolled_dice: an integer that tracks how many dice have been rolled
+    :return: an integer that is sum_of_rolls
+    """
+
+    if positive_integer_test(number_of_rolls) and positive_integer_test(number_of_sides):
+        if rolled_dice < int(number_of_rolls):
             sum_of_rolls += random.randint(1, int(number_of_sides))
-
-        return sum_of_rolls
-
+            rolled_dice += 1
+            return die_roller(number_of_rolls, number_of_sides, sum_of_rolls, rolled_dice)
+        else:
+            return sum_of_rolls
     else:
         return 0
 
@@ -53,8 +85,8 @@ def main():
 
     print("You rolled: " + str(roll_die()) + ". Hope it was good. Unless you're my DM.")
 
-    print("Your random string is: " + str(create_name(15)))
-    print("Your random string is: " + str(create_name("a")))
+    print("Your random string is: " + str(create_name(3, "")))
+    print("Your random string is: " + str(create_name("a", "")))
 
 
 if __name__ == "__main__":
