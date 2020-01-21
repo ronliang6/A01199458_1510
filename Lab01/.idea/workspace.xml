@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4ddc6911-f68b-442a-aaf8-aa8705ea0b9a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WMFQEJCc81o5IofmEXeiaF7sXW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RunManager" selected="Python.functions">
+    <configuration name="functions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="COMP_1510_Lab_01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/functions.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my_circle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="COMP_1510_Lab_01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_circle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="room_painter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="COMP_1510_Lab_01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/room_painter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.functions" />
+        <item itemvalue="Python.room_painter" />
+        <item itemvalue="Python.my_circle" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4ddc6911-f68b-442a-aaf8-aa8705ea0b9a" name="Default Changelist" comment="" />
+      <created>1578951538823</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578951538823</updated>
+      <workItem from="1578951540127" duration="7969000" />
+      <workItem from="1578970191166" duration="15000" />
+      <workItem from="1579020319927" duration="8000000" />
+      <workItem from="1579031823410" duration="1518000" />
+      <workItem from="1579036290807" duration="1633000" />
+      <workItem from="1579039101173" duration="1640000" />
+      <workItem from="1579041268773" duration="36000" />
+      <workItem from="1579046516664" duration="24000" />
+      <workItem from="1579193172782" duration="1662000" />
+      <workItem from="1579208995580" duration="1601000" />
+      <workItem from="1579554749706" duration="1133000" />
+      <workItem from="1579563557458" duration="698000" />
+    </task>
+    <task id="LOCAL-00001" summary="First commit for Lab 01 COMP 1510">
+      <created>1579036374519</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579036374519</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Formatting">
+      <created>1579037506375</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579037506375</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Formatting">
+      <created>1579039406219</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579039406219</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Formatting">
+      <created>1579040110364</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579040110364</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Formatting">
+      <created>1579040844135</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579040844135</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit for Lab 01 COMP 1510" />
+    <MESSAGE value="Formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatting" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579040381121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1579040381121" />
+    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1579040843342">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579040843342" />
+    <state x="933" y="155" key="FileChooserDialogImpl" timestamp="1579576050742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="933" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579576050742" />
+    <state x="1005" y="307" key="Github.ShareDialog" timestamp="1578951888057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="1005" y="307" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1578951888057" />
+    <state x="1074" y="110" width="450" height="586" key="Github.UntrackedFilesDialog" timestamp="1578951910287">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="1074" y="110" width="450" height="586" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1578951910287" />
+    <state width="746" height="210" key="GridCell.Tab.0.bottom" timestamp="1579041303997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579041303997" />
+    <state width="746" height="210" key="GridCell.Tab.0.center" timestamp="1579041303997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579041303997" />
+    <state width="746" height="210" key="GridCell.Tab.0.left" timestamp="1579041303997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579041303997" />
+    <state width="746" height="210" key="GridCell.Tab.0.right" timestamp="1579041303997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579041303997" />
+    <state x="622" y="56" width="914" height="712" key="SettingsEditor" timestamp="1578952404697">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="622" y="56" width="914" height="712" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1578952404697" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1579040879146">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1579040879146" />
+    <state x="849" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1579563570396">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="849" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579563570396" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/COMP_1510_Lab_01$functions.coverage" NAME="functions Coverage Results" MODIFIED="1579041274440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COMP_1510_Lab_01$room_painter.coverage" NAME="room_painter Coverage Results" MODIFIED="1579040523839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COMP_1510_Lab_01$my_circle.coverage" NAME="my_circle Coverage Results" MODIFIED="1579040504004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
