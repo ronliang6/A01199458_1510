@@ -1,9 +1,17 @@
-def calculate_new_number(number_to_convert, destination_base):
-    """Calculate new number in a different base, given a number to convert in base ten and a destination base.
+def calculate_new_number():
+    """Convert a base 10 number to another base in the range [2, 9].
 
-    Call calculate_digit to calculate the remainder, then format and insert that digit as the first index of a
+    Takes in an input as the destination base and calculates the maximum base-10 number possible to convert. Also
+    takes in an input as a base ten number that will be converted to a 4bit number of the destination base. Call
+    calculate_digit to calculate the remainder, then format and insert that digit as the first index of a
     list. Call calculate_quotient to calculate the quotient to continue calculating the next digits. Repeat until
-    four digits have been entered into the list. Concatenate each digit in list into the new number and return it."""
+    four digits have been entered into the list. Concatenate each digit in list into the new number and return it.
+    """
+
+    destination_base = int(input("Please enter the base destination, a number between 2 and 9, inclusive"))
+    maximum_base10_number = pow(destination_base, 4) - 1
+    print("The maximum base 10 number that can be converted is " + str(maximum_base10_number))
+    number_to_convert = int(input("Please enter a number that is less than or equal to " + str(maximum_base10_number)))
 
     digits_list = []
 
@@ -35,22 +43,12 @@ def calculate_quotient(dividend, divisor):
 
 
 def main():
-    """Convert a base 10 number to another base, with bounds.
+    """Call and print the calculate_new_number function."""
 
-    Takes in an input as the destination base and calculates the maximum base-10 number using 4 bits from that. Also
-    takes in an input as a base ten number that will be converted to a 4bit number of the destination base. The
-    calculate_digit function will be called four times, and when needed, will store the returned quotient in a
-    variable. When the calculations are done, the list will be printed.
-    """
-    destination_base = int(input("Please enter the base destination, a number between 2 and 9, inclusive"))
-    maximum_base10_number = pow(destination_base, 4) - 1
-    print("The maximum base 10 number that can be converted is " + str(maximum_base10_number))
-    number_to_convert = int(input("Please enter a number that is less than or equal to " + str(maximum_base10_number)))
-
-    print(calculate_new_number(number_to_convert, destination_base))
+    print(calculate_new_number())
 
 
 if __name__ == "__main__":
-    """Call main if this file is the main program."""
+    """Call the main method if this is the main program."""
 
     main()

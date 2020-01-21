@@ -3,24 +3,28 @@ import string
 
 
 def create_name(length):
-    """Generate a title case string of random letters of a given length."""
+    """Generate a title case string of random letters of a given length and return none if given a non-whole-number."""
 
     if str.isdigit(str(length)):
         random_string = ""
-        for x in range(length):
+        for x in range(int(length)):
             random_string += random.choice(string.ascii_letters)
         return random_string.title()
     else:
         return None
 
 
-def roll_die(number_of_rolls, number_of_sides):
-    """ Calculate a sum, randomly selecting integers within a range a given number of times, if the given parameters
-    are both positive integers.
+def roll_die():
+    """ Calculate a sum, randomly selecting integers within a inputted range an inputted number of times.
 
     If either parameter is less than one, return 0. If not, then randomly select an integer within the range [1,
     number_of_sides] a number of times equal to number_of_rolls, and then return that result.
     """
+
+    print("Welcome to my dice rolling program! You can enter the number of dice that you are rolling as well as how "
+          "many sides you want the dice to have")
+    number_of_rolls = input("Please enter the number of dice that you wish to roll")
+    number_of_sides = input("Please enter the number of sides that you wish your dice to have")
 
     if int(number_of_rolls) > 0 and int(number_of_sides) > 0:
 
@@ -36,19 +40,15 @@ def roll_die(number_of_rolls, number_of_sides):
 
 
 def main():
-    """Ask for arguments to pass onto roll_die function, then call roll_die function with those arguments,
-    then call create_name function."""
+    """Call and print the roll_die and create_name functions."""
 
-    print("Welcome to my dice rolling program! You can enter the number of dice that you are rolling as well as how "
-          "many sides you want the dice to have")
-    number_of_rolls = input("Please enter the number of dice that you wish to roll")
-    number_of_sides = input("Please enter the number of sides that you wish your dice to have")
+    print("You rolled: " + str(roll_die()) + ". Hope it was good. Unless you're my DM.")
 
-    print("You rolled: " + str(roll_die(number_of_rolls, number_of_sides)) + ". Hope it was good. "
-                                                                             "Unless you're my DM.")
-
-    print("Your random string is: " + create_name(15))
+    print("Your random string is: " + str(create_name(15)))
+    print("Your random string is: " + str(create_name("a")))
 
 
 if __name__ == "__main__":
+    """Call the main method if this is the main program."""
+
     main()
