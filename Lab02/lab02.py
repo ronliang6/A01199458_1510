@@ -101,7 +101,7 @@ def main():
 
     # create_name function tests
     print("Your random string is: " + str(create_name(10)))
-    print("Your random string is: " + str(random_name("a")))
+    print("Your random string is: " + str(create_name("a")))
 
 
 if __name__ == "__main__":
