@@ -9,7 +9,7 @@ def base_conversion():
     Given the number of bits and the destination base, the maximum base ten number is determined. Given a number no
     larger than the maximum number, the new number is calculated digit by digit and returned.
 
-    :return: the converted number
+    :return: the converted number as a string
     """
 
     destination_base = int(input("Please enter the base destination, a number between 2 and 9, inclusive"))
@@ -35,9 +35,9 @@ def maximum_number(destination_base, bits):
     """
     Calculate the maximum base 10 number that you can convert given the destination base and the number of bits.
 
-    :param destination_base: a positive integer
-    :param bits: a positive integer
-    :return: a positive integer
+    :param destination_base: the destination base that the answer will be in as a positive integer
+    :param bits: the number of bits that the answer will be in as a positive integer
+    :return: the maximum base 10 number possible to convert as an integer
     """
 
     return pow(destination_base, bits) - 1

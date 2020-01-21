@@ -10,7 +10,7 @@ def positive_integer_test(test):
     """
     Determine if a string is a positive integer.
 
-    :param test: a string
+    :param test: a string that will be checked if it is a positive integer
     :return: if test is a positive integer, return True, otherwise return False.
     """
 
@@ -27,8 +27,8 @@ def create_name(length):
     """
     Create a title-cased string of random letters of a given length.
 
-    :param length: a positive integer
-    :return: a string
+    :param length: the length of the string of random letters as a positive integer
+    :return: the final string of random letters as a string
     """
     return random_name(length, "")
 
@@ -37,9 +37,9 @@ def random_name(length, random_string):
     """
     Create a title-cased string of random letters of a given length.
 
-    :param length: a positive integer
-    :param random_string: a string
-    :return: a string
+    :param length: the length of the string of random letters as a positive integer
+    :param random_string: the string of random letters assembled so far
+    :return: the final string of random letters as a string
     """
     if positive_integer_test(length):
 
@@ -71,8 +71,8 @@ def die_roller(number_of_rolls, number_of_sides, sum_of_rolls, rolled_dice):
     """
     Roll dice with a given number of sides randomly, a given number of times and return that number.
 
-    :param number_of_rolls: an integer
-    :param number_of_sides: an integer
+    :param number_of_rolls: an integer representing the number of dice you want to roll
+    :param number_of_sides: an integer representing the number of sides per dice rolled
     :param sum_of_rolls: an integer that sums the dice rolls
     :param rolled_dice: an integer that tracks how many dice have been rolled
     :return: an integer that is sum_of_rolls
