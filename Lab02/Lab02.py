@@ -45,7 +45,7 @@ def main():
     number_of_sides = input("Please enter the number of sides that you wish your dice to have")
 
     print("You rolled: " + str(roll_die(number_of_rolls, number_of_sides)) + ". Hope it was good. "
-                                                                             "Unless you're the DM.")
+                                                                             "Unless you're my DM.")
 
     print("Your random string is: " + create_name(15))
 
