@@ -17,8 +17,6 @@ def base_conversion():
     print("The maximum base 10 number that can be converted is " + str(maximum_base10_number))
     number_to_convert = int(input("Please enter a number that is less than or equal to " + str(maximum_base10_number)))
 
-    new_number = ""
-
     digit_first = number_to_convert % destination_base
     quotient_first = number_to_convert // destination_base
     digit_second = quotient_first % destination_base
