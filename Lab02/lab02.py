@@ -1,5 +1,5 @@
 """
-Randomly generate strings and integers.
+Generate random strings and integers.
 """
 
 import random
