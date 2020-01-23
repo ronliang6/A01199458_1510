@@ -1,5 +1,5 @@
 """
-Functions to convert a base 10 number to a number in a different base.
+Convert a base 10 number to a number in a different base.
 """
 
 
