@@ -60,7 +60,7 @@ def colour_mixer():
     Prompt the user for two inputs. If the entered inputs are not both primary colours, print a useful error message. If
     the inputs are primary colours but they are the same, print a useful error message. Otherwise print the correct
     colour.
-    :postcondition: return either an error message if the inputs are not strings with the value of two different
+    :postcondition: print either an error message if the inputs are not strings with the value of two different
     primary colours, or the resulting secondary colour if inputs are two different primary colours.
     """
     first_colour = input("please enter a primary colour (red, yellow, or blue)")
@@ -103,10 +103,46 @@ def colour_combiner(first_colour, second_colour):
 
 
 def time_calculator(seconds):
-    time_converter(seconds, 0, 0, 0)
+    """
+    Convert time in seconds to time in days, hours, minutes, and seconds.
+
+    :param seconds: a positive integer representing seconds.
+    :precondition: the user must enter a valid argument according to the PARAM statement above.
+    :postcondition: print the time in days, hours, minutes, and seconds.
+
+    >>> time_calculator(95862)
+    1 2 37 42
+    >>> time_calculator(3606)
+    0 1 0 6
+    """
+    print(time_converter(seconds, 0, 0, 0))
 
 
 def time_converter(seconds, days, hours, minutes):
+    """
+    Simplify time in days, hours, minutes, and seconds.
+
+    Given days, hours, minutes, and seconds, return time in the same format in such a way where seconds are converted
+    into the largest units of time possible. It is possible that the time returned will not be completely simplified
+    if parameters are given in such a way that produce more minutes or hours than than 59. This only occurs if:
+    (seconds % 86400) // 3600 + hours >= 60 or (seconds % 3600) // 60 + minutes >= 60. This will never occur if the
+    arguments provided for the hours and minutes are 0.
+    :param seconds: a non-negative integer representing seconds.
+    :param days: a non-negative integer representing days.
+    :param hours: a non-negative integer representing hours.
+    :param minutes: a non-negative integer representing minutes.
+    :precondition: the user must enter valid arguments according to the PARAM statements above
+    :postcondition: the function will return an object according to the return statement below, where the seconds
+    given will be simplified into the largest units of time possible.
+    :return: a string representing time in days, hours, minutes, and seconds as integers separated by a space (" ").
+
+    >>> time_converter(90061, 0, 0, 0)
+    '1 1 1 1'
+    >>> time_converter(90061, 23, 59, 59)
+    '24 60 60 1'
+    >>> time_converter(0, 0, 0, 0)
+    '0 0 0 0'
+    """
     if seconds >= 86400:
         return time_converter(seconds - 86400, days + 1, hours, minutes)
     elif seconds >= 3600:
@@ -114,7 +150,7 @@ def time_converter(seconds, days, hours, minutes):
     elif seconds >= 60:
         return time_converter(seconds - 60, days, hours, minutes + 1)
     else:
-        print(str(days) + " " + str(hours) + " " + str(minutes) + " " + str(seconds))
+        return str(days) + " " + str(hours) + " " + str(minutes) + " " + str(seconds)
 
 
 def compound_interest(principal, annual_interest, compound_frequency, time_years):
