@@ -59,10 +59,16 @@ def time_calculator(seconds):
     print(time_converter(seconds, 0, 0, 0))
 
 
+def compound_interest(principal, annual_interest, compound_frequency, time_years):
+    new_balance = principal * pow((1 + annual_interest/compound_frequency), (compound_frequency * time_years))
+    return new_balance
+
+
 def main():
     print(convert_to_roman_numeral(3313))
     colour_mixer()
     time_calculator(94553)
+    print(compound_interest(100, 0.02, 2, 10))
 
 
 if __name__ == "__main__":
