@@ -17,9 +17,9 @@ def convert_to_roman_numeral(positive_int):
     >>> convert_to_roman_numeral(3094)
     'MMMXCIV'
     """
-    length = len(str(positive_int))
+    int_length = len(str(positive_int))
     roman_numeral = ""
-    for i in range(length):
+    for i in range(int_length):
         roman_numeral = digit_converter(positive_int, i) + roman_numeral
     return roman_numeral
 
@@ -102,6 +102,10 @@ def colour_combiner(first_colour, second_colour):
         return "purple"
 
 
+def time_calculator(seconds):
+    time_converter(seconds, 0, 0, 0)
+
+
 def time_converter(seconds, days, hours, minutes):
     if seconds >= 86400:
         return time_converter(seconds - 86400, days + 1, hours, minutes)
@@ -111,10 +115,6 @@ def time_converter(seconds, days, hours, minutes):
         return time_converter(seconds - 60, days, hours, minutes + 1)
     else:
         print(str(days) + " " + str(hours) + " " + str(minutes) + " " + str(seconds))
-
-
-def time_calculator(seconds):
-    time_converter(seconds, 0, 0, 0)
 
 
 def compound_interest(principal, annual_interest, compound_frequency, time_years):
@@ -146,27 +146,27 @@ def rock_paper_scissors():
 
 
 def number_generator():
-    return number_generator_helper([])
+    return random_int_list_generator([])
 
 
-def number_generator_helper(numbers_list):
+def random_int_list_generator(numbers_list):
     new_number = random.randint(1, 49)
     if len(numbers_list) <= 5:
         if new_number in numbers_list:
-            return number_generator_helper(numbers_list)
+            return random_int_list_generator(numbers_list)
         else:
             numbers_list.append(new_number)
-            return number_generator_helper(numbers_list)
+            return random_int_list_generator(numbers_list)
     else:
         numbers_list.sort()
         return numbers_list
 
 
 def number_translator():
-    phone_number_input2 = input('Please enter a phone number in the format "XXX-XXX-XXXX".').upper()
+    phone_number_input = input('Please enter a phone number in the format "XXX-XXX-XXXX".').upper()
     translated_number = ""
     for i in range(12):
-        translated_number += translate_digit(phone_number_input2[i])
+        translated_number += translate_digit(phone_number_input[i])
     return translated_number
 
 
