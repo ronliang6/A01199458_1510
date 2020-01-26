@@ -1,22 +1,56 @@
 import random
+import doctest
 
 
 def convert_to_roman_numeral(positive_int):
+    """
+    Translate a positive integer from decimal to roman numeral.
+
+    :param positive_int: a positive integer representing the decimal number.
+    :precondition: the user must enter an integer in the range [1, 10000].
+    :postcondition: the function will return a roman numeral number with the same numerical value as the given
+    argument.
+    :return:a string representing the roman numeral that has equal numerical value to the parameter positive_int.
+
+    >>> convert_to_roman_numeral(10000)
+    'MMMMMMMMMM'
+    >>> convert_to_roman_numeral(3094)
+    'MMMXCIV'
+    """
     length = len(str(positive_int))
     roman_numeral = ""
     for i in range(length):
-        roman_numeral = digit_converter(positive_int, length, i) + roman_numeral
+        roman_numeral = digit_converter(positive_int, i) + roman_numeral
     return roman_numeral
 
 
-def digit_converter(positive_int, length, i):
+def digit_converter(positive_int, position):
+    """
+    Convert a digit from decimal to the roman numeral equivalent.
+
+    The parameter position declares the reverse of the position of the positive_int to be translated. The value 0,
+    will represent the last digit of the positive_int (the one's position) and the value 1 will represent the second
+    last digit of the positive_int (the ten's position) and so forth.
+    :param positive_int: a positive integer in the range [1, 10000].
+    :param position: an integer representing the position of the digit in the positive_int to be converted. Must be no
+    greater than one less than the length of the positive_int.
+    :precondition: the user must enter valid arguments according to the PARAM statements above.
+    :postcondition: the function will correctly translate a digit to the roman numeral equivalent.
+    :return: a string representing the roman numeral that has equal numerical value to the digit determined by both
+    arguments.
+
+    >>> digit_converter(1234, 0)
+    'IV'
+    >>> digit_converter(6789, 3)
+    'MMMMMM'
+    """
     roman_numeral_list = [["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
                           ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
                           ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
                           ["", "M", "MM", "MMM", "MMMM", "MMMMM", "MMMMMM", "MMMMMMM", "MMMMMMMM", "MMMMMMMMM"],
                           ["", "MMMMMMMMMM"]]
 
-    return roman_numeral_list[i][int(str(positive_int)[-(i+1)])]
+    return roman_numeral_list[position][int(str(positive_int)[-(position + 1)])]
 
 
 def colour_mixer():
@@ -45,6 +79,9 @@ def colour_mixer():
     else:
         print("You have entered at least one invalid colour. "
               "Please enter a primary colour (red, yellow, or blue) twice.")
+
+
+
 
 
 def time_converter(seconds, days, hours, minutes):
@@ -149,4 +186,5 @@ def main():
 
 
 if __name__ == "__main__":
+    doctest.testmod()
     main()
