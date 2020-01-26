@@ -44,9 +44,25 @@ def colour_mixer():
               "Please enter a primary colour (red, yellow, or blue) twice.")
 
 
+def time_converter(seconds, days, hours, minutes):
+    if seconds >= 86400:
+        return time_converter(seconds - 86400, days + 1, hours, minutes)
+    elif seconds >= 3600:
+        return time_converter(seconds - 3600, days, hours + 1, minutes)
+    elif seconds >= 60:
+        return time_converter(seconds - 60, days, hours, minutes + 1)
+    else:
+        print(str(days) + " " + str(hours) + " " + str(minutes) + " " + str(seconds))
+
+
+def time_calculator(seconds):
+    print(time_converter(seconds, 0, 0, 0))
+
+
 def main():
     print(convert_to_roman_numeral(3313))
     colour_mixer()
+    time_calculator(94553)
 
 
 if __name__ == "__main__":
