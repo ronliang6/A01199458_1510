@@ -90,12 +90,30 @@ def rock_paper_scissors():
         print("The computer picked " + computer_choice + ". You picked " + player_choice + ". You " + outcome)
 
 
+def number_generator():
+    return number_generator_helper([])
+
+
+def number_generator_helper(numbers_list):
+    new_number = random.randint(1, 49)
+    if len(numbers_list) <= 5:
+        if new_number in numbers_list:
+            return number_generator_helper(numbers_list)
+        else:
+            numbers_list.append(new_number)
+            return number_generator_helper(numbers_list)
+    else:
+        numbers_list.sort()
+        return numbers_list
+
+
 def main():
     print(convert_to_roman_numeral(3313))
     colour_mixer()
     time_calculator(94553)
     print(compound_interest(100, 0.02, 2, 10))
     rock_paper_scissors()
+    print(number_generator())
 
 
 if __name__ == "__main__":
