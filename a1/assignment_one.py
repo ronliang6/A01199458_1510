@@ -1,3 +1,6 @@
+import random
+
+
 def convert_to_roman_numeral(positive_int):
     length = len(str(positive_int))
     roman_numeral = ""
@@ -56,7 +59,7 @@ def time_converter(seconds, days, hours, minutes):
 
 
 def time_calculator(seconds):
-    print(time_converter(seconds, 0, 0, 0))
+    time_converter(seconds, 0, 0, 0)
 
 
 def compound_interest(principal, annual_interest, compound_frequency, time_years):
@@ -64,11 +67,35 @@ def compound_interest(principal, annual_interest, compound_frequency, time_years
     return new_balance
 
 
+def rock_paper_scissors():
+    raw_input = input('Please enter "rock", "paper", or "scissors" to play this game.')
+    player_choice = raw_input.strip().lower()
+    if player_choice != "rock" and player_choice != "paper" and player_choice != "scissor":
+        print('You have entered an invalid choice. The acceptable choices are "rock", "paper", or "scissors".')
+    else:
+        outcome = "don't win."
+        random_number = random.randint(0, 2)
+        if random_number == 0:
+            computer_choice = "rock"
+            if player_choice == "paper":
+                outcome = "win."
+        elif random_number == 1:
+            computer_choice = "paper"
+            if player_choice == "scissors":
+                outcome = "win."
+        else:
+            computer_choice = "scissors"
+            if player_choice == "rock":
+                outcome = "win."
+        print("The computer picked " + computer_choice + ". You picked " + player_choice + ". You " + outcome)
+
+
 def main():
     print(convert_to_roman_numeral(3313))
     colour_mixer()
     time_calculator(94553)
     print(compound_interest(100, 0.02, 2, 10))
+    rock_paper_scissors()
 
 
 if __name__ == "__main__":
