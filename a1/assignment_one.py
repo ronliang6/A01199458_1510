@@ -54,6 +54,15 @@ def digit_converter(positive_int, position):
 
 
 def colour_mixer():
+    """
+    Create the resulting secondary colour from two primary colours given as inputs.
+
+    Prompt the user for two inputs. If the entered inputs are not both primary colours, print a useful error message. If
+    the inputs are primary colours but they are the same, print a useful error message. Otherwise print the correct
+    colour.
+    :postcondition: return either an error message if the inputs are not strings with the value of two different
+    primary colours, or the resulting secondary colour if inputs are two different primary colours.
+    """
     first_colour = input("please enter a primary colour (red, yellow, or blue)")
     second_colour = input("please enter a different primary colour")
     if (first_colour == "red" or first_colour == "blue" or first_colour == "yellow") and \
@@ -61,27 +70,36 @@ def colour_mixer():
         if first_colour == second_colour:
             print("You have entered the same colour twice. "
                   "Please enter two different primary colours (red, yellow, or blue).")
-        elif first_colour == "red":
-            if second_colour == "yellow":
-                print("orange")
-            elif second_colour == "blue":
-                print("purple")
-        elif first_colour == "yellow":
-            if second_colour == "red":
-                print("orange")
-            elif second_colour == "blue":
-                print("green")
-        elif first_colour == "blue":
-            if second_colour == "yellow":
-                print("green")
-            elif second_colour == "red":
-                print("purple")
+        print(colour_combiner(first_colour, second_colour))
     else:
         print("You have entered at least one invalid colour. "
               "Please enter a primary colour (red, yellow, or blue) twice.")
 
 
+def colour_combiner(first_colour, second_colour):
+    """
+    Create the resulting secondary colour from two different primary colours.
 
+    :param first_colour: a string that is "yellow", "red", or "blue".
+    :param second_colour: a string that is "yellow", "red", or "blue", but not the same string as first_colour.
+    :precondition: the user must enter valid arguments according to the PARAM statements above.
+    :postcondition: the function will return an object according to the return statement below.
+    :return: a string that represents the secondary colour created by mixing the two primary colours provided as
+    arguments.
+
+    >>> colour_combiner("yellow", "red")
+    'orange'
+    >>> colour_combiner("blue", "yellow")
+    'green'
+    >>> colour_combiner("red", "blue")
+    'purple'
+    """
+    if (first_colour == "yellow" or first_colour == "red") and (second_colour == "yellow" or second_colour == "red"):
+        return "orange"
+    if (first_colour == "yellow" or first_colour == "blue") and (second_colour == "yellow" or second_colour == "blue"):
+        return "green"
+    if (first_colour == "blue" or first_colour == "red") and (second_colour == "blue" or second_colour == "red"):
+        return "purple"
 
 
 def time_converter(seconds, days, hours, minutes):
