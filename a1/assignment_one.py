@@ -107,6 +107,37 @@ def number_generator_helper(numbers_list):
         return numbers_list
 
 
+def number_translator():
+    phone_number_input2 = input('Please enter a phone number in the format "XXX-XXX-XXXX".').upper()
+    translated_number = ""
+    for i in range(12):
+        translated_number += translate_digit(phone_number_input2[i])
+    return translated_number
+
+
+def translate_digit(digit):
+    if digit.isnumeric():
+        return digit
+    elif digit == "A" or digit == "B" or digit == "C":
+        return "2"
+    elif digit == "D" or digit == "E" or digit == "F":
+        return "3"
+    elif digit == "G" or digit == "H" or digit == "I":
+        return "4"
+    elif digit == "J" or digit == "K" or digit == "L":
+        return "5"
+    elif digit == "M" or digit == "N" or digit == "O":
+        return "6"
+    elif digit == "P" or digit == "Q" or digit == "R" or digit == "S":
+        return "7"
+    elif digit == "T" or digit == "U" or digit == "V":
+        return "8"
+    elif digit == "W" or digit == "X" or digit == "Y" or digit == "Z":
+        return "9"
+    else:
+        return "-"
+
+
 def main():
     print(convert_to_roman_numeral(3313))
     colour_mixer()
@@ -114,6 +145,7 @@ def main():
     print(compound_interest(100, 0.02, 2, 10))
     rock_paper_scissors()
     print(number_generator())
+    print(number_translator())
 
 
 if __name__ == "__main__":
