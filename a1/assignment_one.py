@@ -246,31 +246,42 @@ def number_generator():
     """
     Generate a list of six random, unique integers in the range of [1, 49].
 
+    Components of computational thinking:
+    I demonstrated abstraction and generalization by using a helper function that allowed for greater customization
+    than the problem calls for. It accepts a list of numbers, a minimum range parameter, a maximum range parameter,
+    and a numbers parameter. This means that you can ask something like 55 random integers in the range [-442,
+    999] and give the function some integers that you want the list to have.
+
     :return: a list of six random, unique integers in the range [1, 49].
     """
-    return random_int_list_generator([])
+    return random_int_list_generator([], 1, 49, 6)
 
 
-def random_int_list_generator(numbers_list):
+def random_int_list_generator(numbers_list, minimum_range, maximum_range, numbers):
     """
     Add random unique integers in the range [1, 49] to a given list until there are six unique integers in the range
     [1, 49] and return it.
 
-    :param numbers_list: a list of unique integers in the range [1, 49] with no more than 6 objects.
+    :param numbers_list: a list of unique integers in the range of [minimum_range, maximum_range] with no more
+    objects than the parameter numbers.
+    :param minimum_range: an integer representing the smallest int possible to generate.
+    :param maximum_range: an integer greater than minimum_range + numbers, representing the largest int possible to
+    generate.
+    :param numbers: an integer representing the number of integers to generate.
     :precondition: the user must enter a valid argument according to the PARAM statement above.
-    :postcondition: return a list of six unique integers in the range [1, 49].
-    :return: a list of six unique integers in the range [1, 49].
+    :postcondition: return a list of unique integers
+    :return: a list of unique integers
 
-    >>> random_int_list_generator([1, 2, 3, 4, 5, 6])
+    >>> random_int_list_generator([1, 2, 3, 4, 5, 6], 1, 49, 6)
     [1, 2, 3, 4, 5, 6]
     """
-    new_number = random.randint(1, 49)
-    if len(numbers_list) <= 5:
+    new_number = random.randint(minimum_range, maximum_range)
+    if len(numbers_list) < numbers:
         if new_number in numbers_list:
-            return random_int_list_generator(numbers_list)
+            return random_int_list_generator(numbers_list, minimum_range, maximum_range, numbers)
         else:
             numbers_list.append(new_number)
-            return random_int_list_generator(numbers_list)
+            return random_int_list_generator(numbers_list, minimum_range, maximum_range, numbers)
     else:
         numbers_list.sort()
         return numbers_list
