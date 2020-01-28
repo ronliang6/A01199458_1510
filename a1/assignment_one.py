@@ -291,6 +291,10 @@ def number_translator():
     """
     Translate the letters in a phone number to their numerical equivalent.
 
+    Components of computational thinking:
+    I demonstrated decomposition by modularizing the translation into a function that translates a single character.
+    The primary function will call that 12 times but could be configured to translate phone numbers of larger length.
+
     :precondition: provide a string that represents a phone number in the format "XXX-XXX-XXXX" where any "X" can be
     a letter or number as an input.
     :postcondition: return a translated phone number as a string in the same format except all letters are now numbers.
