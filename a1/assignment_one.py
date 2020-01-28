@@ -59,8 +59,11 @@ def digit_converter(positive_int, position):
                           ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
                           ["", "M", "MM", "MMM", "MMMM", "MMMMM", "MMMMMM", "MMMMMMM", "MMMMMMMM", "MMMMMMMMM"],
                           ["", "MMMMMMMMMM"]]
+    int_as_str = str(positive_int)
+    list_index = -(position + 1)
+    roman_representation = int(int_as_str[list_index])
 
-    return roman_numeral_list[position][int(str(positive_int)[-(position + 1)])]
+    return roman_numeral_list[position][roman_representation]
 
 
 def colour_mixer():
