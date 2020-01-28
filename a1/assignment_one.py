@@ -34,8 +34,8 @@ def convert_to_roman_numeral(positive_int):
     """
     int_length = len(str(positive_int))
     roman_numeral = ""
-    for i in range(int_length):
-        roman_numeral = digit_converter(positive_int, i) + roman_numeral
+    for digit_position in range(int_length):
+        roman_numeral = digit_converter(positive_int, digit_position) + roman_numeral
     return roman_numeral
 
 
@@ -315,8 +315,8 @@ def number_translator():
     """
     phone_number_input = input('Please enter a phone number in the format "XXX-XXX-XXXX".').upper()
     translated_number = ""
-    for i in range(12):
-        translated_number += translate_char(phone_number_input[i])
+    for digit in range(12):
+        translated_number += translate_char(phone_number_input[digit])
     return translated_number
 
 
