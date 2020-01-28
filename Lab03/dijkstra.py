@@ -17,10 +17,18 @@ def dijkstra(colour_list):
     >>> dijkstra(dutch)
     >>> print(dutch)
     ['red', 'red', 'blue']
+    >>> dutch = ["blue", "white", "red"]
+    >>> dijkstra(dutch)
+    >>> print(dutch)
+    ['red', 'white', 'blue']
     >>> dutch = ["red"]
     >>> dijkstra(dutch)
     >>> print(dutch)
     ['red']
+    >>> dutch = ["red", "red", "red"]
+    >>> dijkstra(dutch)
+    >>> print(dutch)
+    ['red', 'red', 'red']
     >>> dutch = ["white", "red", "blue", "white", "red", "blue", "red", "blue", "white"]
     >>> dijkstra(dutch)
     >>> print(dutch)
