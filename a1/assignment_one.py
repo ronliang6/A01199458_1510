@@ -29,6 +29,8 @@ def convert_to_roman_numeral(positive_int):
     'MMMMMMMMMM'
     >>> convert_to_roman_numeral(3094)
     'MMMXCIV'
+    >>> convert_to_roman_numeral(1)
+    'I'
     """
     int_length = len(str(positive_int))
     roman_numeral = ""
@@ -49,10 +51,12 @@ def digit_converter(positive_int, position):
     :return: a string representing the roman numeral that has equal numerical value to the digit determined by both
     arguments.
 
-    >>> digit_converter(1234, 0)
-    'IV'
+    >>> digit_converter(1, 0)
+    'I'
     >>> digit_converter(6789, 3)
     'MMMMMM'
+    >>> digit_converter(10000, 4)
+    'MMMMMMMMMM'
     """
     roman_numeral_list = [["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
                           ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
@@ -139,6 +143,8 @@ def time_calculator(seconds):
     0 0 0 0
     >>> time_calculator(90006)
     1 1 0 6
+    >>> time_calculator(9999999)
+    115 17 46 39
     """
     print(time_converter(seconds, 0, 0, 0))
 
@@ -182,12 +188,14 @@ def compound_interest(principal, annual_interest, compound_frequency, time_years
 
     :param principal: a float representing the original balance of the account.
     :param annual_interest: a float representing the fractional interest earned annually without compounding.
-    :param compound_frequency: an integer representing the number of times interest is compounded a year.
+    :param compound_frequency: a positive integer representing the number of times interest is compounded a year.
     :param time_years: an integer representing the number of years the interest will accrue.
     :precondition: the user must enter valid arguments according to the PARAM statements above
     :postcondition: return the new balance of the account.
     :return: a float representing the new balance of an account that has accrued compound interest.
 
+    >>> compound_interest(0, 0, 1, 0)
+    0.0
     >>> compound_interest(100.00, 0.1, 1, 2)
     121.00000000000001
     >>> compound_interest(2.00, 1.0, 2, 2)
@@ -268,15 +276,17 @@ def random_int_list_generator(numbers_list, minimum_range, maximum_range, number
     :param numbers_list: a list of unique integers in the range of [minimum_range, maximum_range] with no more
     objects than the parameter numbers.
     :param minimum_range: an integer representing the smallest int possible to generate.
-    :param maximum_range: an integer greater than minimum_range + numbers, representing the largest int possible to
+    :param maximum_range: an integer greater than minimum_range + numbers - 1, representing the largest int possible to
     generate.
-    :param numbers: an integer representing the number of integers to generate.
+    :param numbers: a positive integer representing the number of integers to generate.
     :precondition: the user must enter a valid argument according to the PARAM statement above.
     :postcondition: return a list of unique integers
     :return: a list of unique integers
 
     >>> random_int_list_generator([1, 2, 3, 4, 5, 6], 1, 49, 6)
     [1, 2, 3, 4, 5, 6]
+    >>> random_int_list_generator([], 0, 0, 1)
+    [0]
     """
     new_number = random.randint(minimum_range, maximum_range)
     if len(numbers_list) < numbers:
@@ -351,7 +361,7 @@ def main():
     doctest.testmod()
     print(convert_to_roman_numeral(3313))
     colour_mixer()
-    time_calculator(94553)
+    time_calculator(9999999)
     print(compound_interest(100, 0.02, 2, 10))
     rock_paper_scissors()
     print(number_generator())
