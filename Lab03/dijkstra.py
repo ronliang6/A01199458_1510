@@ -13,17 +13,24 @@ def dijkstra(colour_list):
     :precondition: the function is called with acceptable PARAM statements as defined above.
     :postcondition: sort the list given into the order of red, then white, then blue.
 
-    >>> dijkstra(["red", "blue", "red"])
+    >>> dutch = ["red", "blue", "red"]
+    >>> dijkstra(dutch)
+    >>> print(dutch)
     ['red', 'red', 'blue']
-    >>> dijkstra(["red"])
+    >>> dutch = ["red"]
+    >>> dijkstra(dutch)
+    >>> print(dutch)
     ['red']
-    >>> dijkstra(["white", "red", "blue", "white", "red", "blue", "red", "blue", "white"])
+    >>> dutch = ["white", "red", "blue", "white", "red", "blue", "red", "blue", "white"]
+    >>> dijkstra(dutch)
+    >>> print(dutch)
     ['red', 'red', 'red', 'white', 'white', 'white', 'blue', 'blue', 'blue']
-    >>> dijkstra(["red", "white", "blue"])
+    >>> dutch = (["red", "white", "blue"])
+    >>> dijkstra(dutch)
+    >>> print(dutch)
     ['red', 'white', 'blue']
     """
     colour_list.sort(key=dutch_sort)
-    print(colour_list)
 
 
 def dutch_sort(colour):
@@ -54,6 +61,7 @@ def main():
     doctest.testmod()
     dutch = ["white", "red", "blue", "white", "red", "blue", "red", "blue", "white"]
     dijkstra(dutch)
+    print(dutch)
 
 
 if __name__ == "__main__":
