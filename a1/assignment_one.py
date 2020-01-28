@@ -212,12 +212,16 @@ def number_generator():
 
 def random_int_list_generator(numbers_list):
     """
-    Create and return a list of six random integers in the range [1, 49].
+    Add random unique integers in the range [1, 49] to a given list until there are six unique integers in the range
+    [1, 49] and return it.
 
     :param numbers_list: a list of unique integers in the range [1, 49] with no more than 6 objects.
-    :precondition: the user must enter valid arguments according to the PARAM statements above.
-    :postcondition:
-    :return: a list of six unique integers in the range [1, 49]
+    :precondition: the user must enter a valid argument according to the PARAM statement above.
+    :postcondition: return a list of six unique integers in the range [1, 49].
+    :return: a list of six unique integers in the range [1, 49].
+
+    >>> random_int_list_generator([1, 2, 3, 4, 5, 6])
+    [1, 2, 3, 4, 5, 6]
     """
     new_number = random.randint(1, 49)
     if len(numbers_list) <= 5:
@@ -232,34 +236,56 @@ def random_int_list_generator(numbers_list):
 
 
 def number_translator():
+    """
+    Translate the letters in a phone number to their numerical equivalent.
+
+    :precondition: provide a string that represents a phone number in the format "XXX-XXX-XXXX" where any "X" can be
+    a letter or number as an input.
+    :postcondition: return a translated phone number as a string in the same format except all letters are now numbers.
+    :return: return the translated phone number.
+    """
     phone_number_input = input('Please enter a phone number in the format "XXX-XXX-XXXX".').upper()
     translated_number = ""
     for i in range(12):
-        translated_number += translate_digit(phone_number_input[i])
+        translated_number += translate_char(phone_number_input[i])
     return translated_number
 
 
-def translate_digit(digit):
-    if digit.isnumeric():
-        return digit
-    elif digit == "A" or digit == "B" or digit == "C":
+def translate_char(char):
+    """
+    Translate a character to it's phone-book equivalent if the digit is a letter and return it, otherwise return the
+    character.
+
+    :param char: a string with a value that is equal to an uppercase letter.
+    :precondition: the user must enter a valid argument according to the PARAM statement above.
+    :postcondition: return an object defined below in the RETURN statement.
+    :return: a string whose value is the translated digit or the string that was given as an argument.
+
+    >>> translate_char("A")
+    '2'
+    >>> translate_char("4")
+    '4'
+    >>> translate_char("-")
+    '-'
+    """
+    if char == "A" or char == "B" or char == "C":
         return "2"
-    elif digit == "D" or digit == "E" or digit == "F":
+    elif char == "D" or char == "E" or char == "F":
         return "3"
-    elif digit == "G" or digit == "H" or digit == "I":
+    elif char == "G" or char == "H" or char == "I":
         return "4"
-    elif digit == "J" or digit == "K" or digit == "L":
+    elif char == "J" or char == "K" or char == "L":
         return "5"
-    elif digit == "M" or digit == "N" or digit == "O":
+    elif char == "M" or char == "N" or char == "O":
         return "6"
-    elif digit == "P" or digit == "Q" or digit == "R" or digit == "S":
+    elif char == "P" or char == "Q" or char == "R" or char == "S":
         return "7"
-    elif digit == "T" or digit == "U" or digit == "V":
+    elif char == "T" or char == "U" or char == "V":
         return "8"
-    elif digit == "W" or digit == "X" or digit == "Y" or digit == "Z":
+    elif char == "W" or char == "X" or char == "Y" or char == "Z":
         return "9"
     else:
-        return "-"
+        return char
 
 
 def main():
