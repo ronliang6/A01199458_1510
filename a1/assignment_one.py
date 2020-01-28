@@ -198,30 +198,48 @@ def rock_paper_scissors():
     """
     Simulate one game of rock, paper, scissors.
 
+    Components of computational thinking:
+    I demonstrated decomposition by creating a helper function that determines whether or not a game is won or not
+    given choices. I demonstrated generalization/abstraction by designing parts of my code to be easily scaled to
+    include more choices. If I wanted to play rock, paper, scissors, lizard, spock, all I need to do is add those
+    choices to game_choices and make some other relatively simple changes.
+
     :precondition: provide an input.
     :postcondition: a string that is an error message if they have entered an invalid input or one that informs the
     user whether they have won.
     """
+    game_choices = ["rock", "paper", "scissors"]
     raw_input = input('Please enter "rock", "paper", or "scissors" to play this game.')
     player_choice = raw_input.strip().lower()
     if player_choice != "rock" and player_choice != "paper" and player_choice != "scissor":
         print('You have entered an invalid choice. The acceptable choices are "rock", "paper", or "scissors".')
     else:
-        outcome = "don't win."
-        random_number = random.randint(0, 2)
-        if random_number == 0:
-            computer_choice = "rock"
-            if player_choice == "paper":
-                outcome = "win."
-        elif random_number == 1:
-            computer_choice = "paper"
-            if player_choice == "scissors":
-                outcome = "win."
-        else:
-            computer_choice = "scissors"
-            if player_choice == "rock":
-                outcome = "win."
-        print("The computer picked " + computer_choice + ". You picked " + player_choice + ". You " + outcome)
+        computer_choice = random.choice(game_choices)
+        outcome = rock_paper_scissors_round(player_choice, computer_choice)
+        print("The computer picked " + computer_choice + ". " + outcome)
+
+
+def rock_paper_scissors_round(player_choice, computer_choice):
+    """
+    Decide whether or not a player won a game of rock paper scissors.
+
+    :param player_choice: a string that represents the player's choice.
+    :param computer_choice: a string that represents the computer's choice.
+    :precondition: both arguments provided are "rock", "paper", or "scissors"
+    :postcondition: return a string that declares if the player has won or not.
+    :return: a string that declares whether the player won.
+
+    >>> rock_paper_scissors_round("rock", "scissors")
+    'You win!'
+    >>> rock_paper_scissors_round("paper", "paper")
+    "You don't win."
+    """
+    if (computer_choice == "rock" and player_choice == "paper") or \
+       (computer_choice == "paper" and player_choice == "scissors") or \
+       (computer_choice == "scissors" and player_choice == "rock"):
+        return "You win!"
+    else:
+        return "You don't win."
 
 
 def number_generator():
