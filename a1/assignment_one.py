@@ -1,3 +1,8 @@
+"""
+
+"""
+
+
 import random
 import doctest
 
@@ -5,6 +10,14 @@ import doctest
 def convert_to_roman_numeral(positive_int):
     """
     Translate a positive integer from decimal to roman numeral.
+
+    Components of computational thinking:
+    Translating a decimal number to a roman numeral is composed of translating each digit of a decimal number then
+    appending those translations together. I demonstrated pattern matching here and then decomposition by creating a
+    helper function that handled translating a single digit. Originally in the helper function digit_converter,
+    I had five separate lists and manually selected the correct list for the translation. I realized that I could use
+    the position parameter given to that function to select for the correct list in a list of lists and demonstrated
+    automation.
 
     :param positive_int: a positive integer representing the decimal number.
     :precondition: the user must enter an integer in the range [1, 10000].
@@ -28,9 +41,6 @@ def digit_converter(positive_int, position):
     """
     Convert a digit from decimal to the roman numeral equivalent.
 
-    The parameter position declares the reverse of the position of the positive_int to be translated. The value 0,
-    will represent the last digit of the positive_int (the one's position) and the value 1 will represent the second
-    last digit of the positive_int (the ten's position) and so forth.
     :param positive_int: a positive integer in the range [1, 10000].
     :param position: an integer representing the position of the digit in the positive_int to be converted. Must be no
     greater than one less than the length of the positive_int.
@@ -57,7 +67,13 @@ def colour_mixer():
     """
     Create the resulting secondary colour from two primary colours given as inputs.
 
-    Prompt the user for two inputs for mixing primary colours. If the user enters invalid
+    Components of computational thinking:
+    I demonstrated decomposition by separating the actual colour mixing into a different function and handled all
+    the input receiving and error statements in the primary function. The precondition for the helper function
+    dictates that the function must receive two different primary colours. I believe I demonstrated a small
+    improvement in my algorithm by not accounting for cases where the colours are the same, resulting in a more
+    efficient function with less lines of code.
+
     :precondition: the user provides two inputs.
     :postcondition: print the correct secondary colour that results from mixing two primary colours or a useful error
     message.
@@ -95,15 +111,22 @@ def colour_combiner(first_colour, second_colour):
     """
     if (first_colour == "yellow" or first_colour == "red") and (second_colour == "yellow" or second_colour == "red"):
         return "orange"
-    if (first_colour == "yellow" or first_colour == "blue") and (second_colour == "yellow" or second_colour == "blue"):
+    elif (first_colour == "yellow" or first_colour == "blue") and (second_colour == "yellow" or second_colour ==
+                                                                   "blue"):
         return "green"
-    if (first_colour == "blue" or first_colour == "red") and (second_colour == "blue" or second_colour == "red"):
+    else:
         return "purple"
 
 
 def time_calculator(seconds):
     """
     Convert time in seconds to time in days, hours, minutes, and seconds.
+
+    Components of computational thinking:
+    I demonstrated a good understanding of algorithms and automation by building this function that closely resembles
+    how one might solve this problem in real life. I designed a recursive function to repeatedly reduce seconds by a
+    fixed amount and increase the relevant time unit by one until there are not enough seconds to continue,
+    at which point the function begins with the next time unit.
 
     :param seconds: a positive integer representing seconds.
     :precondition: the user must enter a valid argument according to the PARAM statement above.
