@@ -57,11 +57,10 @@ def colour_mixer():
     """
     Create the resulting secondary colour from two primary colours given as inputs.
 
-    Prompt the user for two inputs. If the entered inputs are not both primary colours, print a useful error message. If
-    the inputs are primary colours but they are the same, print a useful error message. Otherwise print the correct
-    colour.
-    :postcondition: print either an error message if the inputs are not strings with the value of two different
-    primary colours, or the resulting secondary colour if inputs are two different primary colours.
+    Prompt the user for two inputs for mixing primary colours. If the user enters invalid
+    :precondition: the user provides two inputs.
+    :postcondition: print the correct secondary colour that results from mixing two primary colours or a useful error
+    message.
     """
     first_colour = input("please enter a primary colour (red, yellow, or blue)")
     second_colour = input("please enter a different primary colour")
@@ -110,10 +109,10 @@ def time_calculator(seconds):
     :precondition: the user must enter a valid argument according to the PARAM statement above.
     :postcondition: print the time in days, hours, minutes, and seconds.
 
-    >>> time_calculator(95862)
-    1 2 37 42
-    >>> time_calculator(3606)
-    0 1 0 6
+    >>> time_calculator(0)
+    0 0 0 0
+    >>> time_calculator(90006)
+    1 1 0 6
     """
     print(time_converter(seconds, 0, 0, 0))
 
@@ -122,11 +121,9 @@ def time_converter(seconds, days, hours, minutes):
     """
     Simplify time in days, hours, minutes, and seconds.
 
-    Given days, hours, minutes, and seconds, return time in the same format in such a way where seconds are converted
-    into the largest units of time possible. It is possible that the time returned will not be completely simplified
-    if parameters are given in such a way that produce more minutes or hours than than 59. This only occurs if:
-    (seconds % 86400) // 3600 + hours >= 60 or (seconds % 3600) // 60 + minutes >= 60. This will never occur if the
-    arguments provided for the hours and minutes are 0.
+    Only the seconds is simplified into days, hours, and minutes. In some cases it is possible to have more minutes and
+    hours than 59, however that situation will only occur in scenarios where the function is called with hours or
+    minutes > 0.
     :param seconds: a non-negative integer representing seconds.
     :param days: a non-negative integer representing days.
     :param hours: a non-negative integer representing hours.
@@ -136,8 +133,8 @@ def time_converter(seconds, days, hours, minutes):
     given will be simplified into the largest units of time possible.
     :return: a string representing time in days, hours, minutes, and seconds as integers separated by a space (" ").
 
-    >>> time_converter(90061, 0, 0, 0)
-    '1 1 1 1'
+    >>> time_converter(93784, 0, 0, 0)
+    '1 2 3 4'
     >>> time_converter(90061, 23, 59, 59)
     '24 60 60 1'
     >>> time_converter(0, 0, 0, 0)
@@ -154,11 +151,34 @@ def time_converter(seconds, days, hours, minutes):
 
 
 def compound_interest(principal, annual_interest, compound_frequency, time_years):
+    """
+    Calculate and return the new balance of an account when earning compound interest.
+
+    :param principal: a float representing the original balance of the account.
+    :param annual_interest: a float representing the fractional interest earned annually without compounding.
+    :param compound_frequency: an integer representing the number of times interest is compounded a year.
+    :param time_years: an integer representing the number of years the interest will accrue.
+    :precondition: the user must enter valid arguments according to the PARAM statements above
+    :postcondition: return the new balance of the account.
+    :return: a float representing the new balance of an account that has accrued compound interest.
+
+    >>> compound_interest(100.00, 0.1, 1, 2)
+    121.00000000000001
+    >>> compound_interest(2.00, 1.0, 2, 2)
+    10.125
+    """
     new_balance = principal * pow((1 + annual_interest/compound_frequency), (compound_frequency * time_years))
     return new_balance
 
 
 def rock_paper_scissors():
+    """
+    Simulate one game of rock, paper, scissors.
+
+    :precondition: provide an input.
+    :postcondition: a string that is an error message if they have entered an invalid input or one that informs the
+    user whether they have won.
+    """
     raw_input = input('Please enter "rock", "paper", or "scissors" to play this game.')
     player_choice = raw_input.strip().lower()
     if player_choice != "rock" and player_choice != "paper" and player_choice != "scissor":
@@ -182,10 +202,23 @@ def rock_paper_scissors():
 
 
 def number_generator():
+    """
+    Generate a list of six random, unique integers in the range of [1, 49].
+
+    :return: a list of six random, unique integers in the range [1, 49].
+    """
     return random_int_list_generator([])
 
 
 def random_int_list_generator(numbers_list):
+    """
+    Create and return a list of six random integers in the range [1, 49].
+
+    :param numbers_list: a list of unique integers in the range [1, 49] with no more than 6 objects.
+    :precondition: the user must enter valid arguments according to the PARAM statements above.
+    :postcondition:
+    :return: a list of six unique integers in the range [1, 49]
+    """
     new_number = random.randint(1, 49)
     if len(numbers_list) <= 5:
         if new_number in numbers_list:
@@ -230,6 +263,7 @@ def translate_digit(digit):
 
 
 def main():
+    doctest.testmod()
     print(convert_to_roman_numeral(3313))
     colour_mixer()
     time_calculator(94553)
@@ -240,5 +274,4 @@ def main():
 
 
 if __name__ == "__main__":
-    doctest.testmod()
     main()
