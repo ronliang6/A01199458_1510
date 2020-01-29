@@ -1,5 +1,7 @@
 """
 Sort a list of colours into the order red, white, and blue.
+Ronald Liang
+A01199458
 """
 
 import doctest
@@ -66,6 +68,9 @@ def dutch_sort(colour):
 
 
 def main():
+    """
+    Showcase an example of the dijkstra function working on an list and run doctests.
+    """
     doctest.testmod()
     dutch = ["white", "red", "blue", "white", "red", "blue", "red", "blue", "white"]
     dijkstra(dutch)
