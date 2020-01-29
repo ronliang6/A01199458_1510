@@ -1,5 +1,9 @@
 """
+Solve a variety of problems with a variety of functions.
 
+See the docstrings of each function for a more detailed explanation of what each function does. There is not enough
+in common between them to constitute what would resemble a common goal that this module might work towards. Instead
+this module contains a variety of useful tools.
 """
 
 
