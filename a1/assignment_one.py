@@ -164,8 +164,8 @@ def time_converter(seconds, days, hours, minutes):
     :param days: a non-negative integer representing days.
     :param hours: a non-negative integer representing hours.
     :param minutes: a non-negative integer representing minutes.
-    :precondition: the user must enter valid arguments according to the PARAM statements above
-    :postcondition: the function will return an object according to the return statement below, where the seconds
+    :precondition: the user must enter valid arguments according to the PARAM statements above.
+    :postcondition: the function will return an object according to the return statement below, where the seconds.
     given will be simplified into the largest units of time possible.
     :return: a string representing time in days, hours, minutes, and seconds as integers separated by a space (" ").
 
@@ -194,7 +194,7 @@ def compound_interest(principal, annual_interest, compound_frequency, time_years
     :param annual_interest: a float representing the fractional interest earned annually without compounding.
     :param compound_frequency: a positive integer representing the number of times interest is compounded a year.
     :param time_years: an integer representing the number of years the interest will accrue.
-    :precondition: the user must enter valid arguments according to the PARAM statements above
+    :precondition: the user must enter valid arguments according to the PARAM statements above.
     :postcondition: return the new balance of the account.
     :return: a float representing the new balance of an account that has accrued compound interest.
 
@@ -284,8 +284,8 @@ def random_int_list_generator(numbers_list, minimum_range, maximum_range, number
     generate.
     :param numbers: a positive integer representing the number of integers to generate.
     :precondition: the user must enter a valid argument according to the PARAM statement above.
-    :postcondition: return a list of unique integers
-    :return: a list of unique integers
+    :postcondition: return a list of unique integers.
+    :return: a list of unique integers.
 
     >>> random_int_list_generator([1, 2, 3, 4, 5, 6], 1, 49, 6)
     [1, 2, 3, 4, 5, 6]
