@@ -50,6 +50,8 @@ def index_of_substring(sentence, substring):
     10
     >>> index_of_substring("", "")
     0
+    >>> index_of_substring("aaaaaaaaaaaa", "b")
+    -1
     """
     if substring in sentence:
         return sentence.find(substring)
