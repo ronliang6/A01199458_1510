@@ -46,7 +46,7 @@ def index_of_substring(sentence, substring):
 
     >>> index_of_substring("0123456789", "4")
     4
-    >>> index_of_substring("Hello how are you doing", "are")
+    >>> index_of_substring("Hello how are you doing are", "are")
     10
     >>> index_of_substring("", "")
     0
