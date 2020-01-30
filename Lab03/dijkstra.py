@@ -69,7 +69,7 @@ def dutch_sort(colour):
 
 def main():
     """
-    Showcase an example of the dijkstra function working on an list and run doctests.
+    Showcase the dijkstra function working on an list.
     """
     doctest.testmod()
     dutch = ["white", "red", "blue", "white", "red", "blue", "red", "blue", "white"]
