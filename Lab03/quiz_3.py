@@ -1,5 +1,9 @@
 """
 Solve a variety of problems.
+Ronald Liang
+A01199458
+
+Partner: Kyrill Metalnikov
 """
 
 
