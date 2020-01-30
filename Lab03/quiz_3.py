@@ -14,10 +14,10 @@ def average_three_greatest_ints(int1, int2, int3, int4):
     """
     Calculate the average of the three greatest integers when given four.
 
-    :param int1: an integer that represents a grade between 1 and 100.
-    :param int2: an integer that represents a grade.
-    :param int3: an integer that represents a grade.
-    :param int4: an integer that represents a grade.
+    :param int1: an integer that represents a grade in the range[1, 100].
+    :param int2: an integer that represents a grade in the range[1, 100].
+    :param int3: an integer that represents a grade in the range[1, 100].
+    :param int4: an integer that represents a grade in the range[1, 100].
     :precondition: provide acceptable arguments according to the PARAM statements above.
     :postcondition: return an object according to the return value below.
     :return: a float that represents the average of the three highest grades.
