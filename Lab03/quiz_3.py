@@ -14,7 +14,7 @@ def average_three_greatest_ints(int1, int2, int3, int4):
     """
     Calculate the average of the three greatest integers when given four.
 
-    :param int1: an integer that represents a grade.
+    :param int1: an integer that represents a grade between 1 and 100.
     :param int2: an integer that represents a grade.
     :param int3: an integer that represents a grade.
     :param int4: an integer that represents a grade.
@@ -26,8 +26,8 @@ def average_three_greatest_ints(int1, int2, int3, int4):
     3.0
     >>> average_three_greatest_ints(0, 0, 0, 0)
     0.0
-    >>> average_three_greatest_ints(1000, 7000, 9000, 14000)
-    10000.0
+    >>> average_three_greatest_ints(10, 100, 100, 100)
+    100.0
     """
     grades_list = [int1, int2, int3, int4]
     grades_list.sort()
