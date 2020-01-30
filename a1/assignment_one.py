@@ -362,6 +362,9 @@ def translate_char(char):
 
 
 def main():
+    """
+    Execute the functions in this module.
+    """
     doctest.testmod()
     print(convert_to_roman_numeral(3313))
     colour_mixer()
