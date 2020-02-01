@@ -190,6 +190,12 @@ def compound_interest(principal, annual_interest, compound_frequency, time_years
     """
     Calculate and return the new balance of an account when earning compound interest.
 
+    Components of computational thinking:
+    The function is as generalized as it can be to solve a problem as simple as compound interest. The function accepts
+    every variable of the compound interest formula as a parameter, as opposed to hard coding an interest rate such
+    as 2%. The new_balance variable is not strictly necessary but is added so that it can be manipulated if this
+    formula needs to be adapted for additional calculations.
+
     :param principal: a float representing the original balance of the account.
     :param annual_interest: a float representing the fractional interest earned annually without compounding.
     :param compound_frequency: a positive integer representing the number of times interest is compounded a year.
@@ -366,13 +372,6 @@ def main():
     Execute the functions in this module.
     """
     doctest.testmod()
-    print(convert_to_roman_numeral(3313))
-    colour_mixer()
-    time_calculator(9999999)
-    print(compound_interest(100, 0.02, 2, 10))
-    rock_paper_scissors()
-    print(number_generator())
-    print(number_translator())
 
 
 if __name__ == "__main__":
