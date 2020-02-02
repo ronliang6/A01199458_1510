@@ -39,6 +39,7 @@ def convert_to_roman_numeral(positive_int):
     int_length = len(str(positive_int))
     roman_numeral = ""
     for digit_position in range(int_length):
+        # For every digit in my integer, append the translated digit to the beginning of my roman numeral string
         roman_numeral = digit_converter(positive_int, digit_position) + roman_numeral
     return roman_numeral
 
@@ -70,6 +71,8 @@ def digit_converter(positive_int, position):
     int_as_str = str(positive_int)
     list_index = -(position + 1)
     roman_representation = int(int_as_str[list_index])
+    # These variables above help find the relevant number to return for a digit (IV or LX for 6, depending on the
+    # position)
 
     return roman_numeral_list[position][roman_representation]
 
@@ -93,6 +96,7 @@ def colour_mixer():
     second_colour = input("please enter a different primary colour")
     if (first_colour == "red" or first_colour == "blue" or first_colour == "yellow") and \
             (second_colour == "red" or second_colour == "blue" or second_colour == "yellow"):
+        # The above statement checks to see if both colours are primary colours
         if first_colour == second_colour:
             print("You have entered the same colour twice. "
                   "Please enter two different primary colours (red, yellow, or blue).")
@@ -151,6 +155,8 @@ def time_calculator(seconds):
     115 17 46 39
     """
     print(time_converter(seconds, 0, 0, 0))
+    # Initialize time_convert function with seconds, and 0 as days, hours, and minutes. This is needed because
+    # time_converter is a recursive function and will "count up" those arguments.
 
 
 def time_converter(seconds, days, hours, minutes):
@@ -212,6 +218,7 @@ def compound_interest(principal, annual_interest, compound_frequency, time_years
     10.125
     """
     new_balance = principal * pow((1 + annual_interest/compound_frequency), (compound_frequency * time_years))
+    # The above formula is the formula for compound interest
     return new_balance
 
 
@@ -276,6 +283,8 @@ def number_generator():
     :return: a list of six random, unique integers in the range [1, 49].
     """
     return random_int_list_generator([], 1, 49, 6)
+    # Call the random_int_list_generator and provide it with an empty list, the range [1, 49], and six as the number
+    # of integers requested.
 
 
 def random_int_list_generator(numbers_list, minimum_range, maximum_range, numbers):
@@ -302,10 +311,13 @@ def random_int_list_generator(numbers_list, minimum_range, maximum_range, number
     if len(numbers_list) < numbers:
         if new_number in numbers_list:
             return random_int_list_generator(numbers_list, minimum_range, maximum_range, numbers)
+        # If my random number is already in the list, ignore it and reiterate
         else:
             numbers_list.append(new_number)
             return random_int_list_generator(numbers_list, minimum_range, maximum_range, numbers)
+        # If my random number isn't already in the list, add it and reiterate
     else:
+        # If my list has sufficient numbers, sort and return the list
         numbers_list.sort()
         return numbers_list
 
@@ -327,6 +339,7 @@ def number_translator():
     translated_number = ""
     for digit in range(12):
         translated_number += translate_char(phone_number_input[digit])
+        # For each digit in my phone number, translate it and append it to a string
     return translated_number
 
 
@@ -365,6 +378,8 @@ def translate_char(char):
         return "9"
     else:
         return char
+    # If the digit provided is a letter, translate it to the appropriate number and then return it. Otherwise return
+    # the digit
 
 
 def main():
