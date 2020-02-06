@@ -1,5 +1,6 @@
 """
 Provide statistics on a provided list.
+Partner: Ralph Killian
 """
 
 import doctest
