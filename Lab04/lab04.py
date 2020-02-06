@@ -4,9 +4,10 @@ import math
 
 def eratosthenes(upperbound):
     """
+    Return a list of all prime numbers less than the upper bound provided.
 
     :param upperbound: a positive integer
-    :return:
+    :return: a list of positive integers
 
     >>> eratosthenes(10)
     [2, 3, 5, 7]
@@ -35,6 +36,30 @@ def eratosthenes_helper(numbers_list, prime):
     for i in range(len(numbers_to_delete)):
         numbers_list.remove(numbers_to_delete[i])
     return numbers_list
+
+
+def cash_money(money):
+    """
+
+    :param money:
+    :return:
+
+    >>> cash_money(0.01)
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+
+    >>> cash_money(66.53)
+    [0, 1, 0, 1, 1, 0, 1, 2, 0, 0, 3]
+
+    >>> cash_money(9999999.99)
+    [99999, 1, 2, 0, 1, 2, 0, 3, 2, 0, 4]
+    """
+    denominations = [100, 50, 20, 10, 5, 2, 1, 0.25, 0.10, 0.05, 0.01]
+    breakdown = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    for i in range(len(denominations)):
+        if money >= denominations[i]:
+            breakdown[i] = int(money // denominations[i])
+            money %= denominations[i]
+    return breakdown
 
 
 def main():
