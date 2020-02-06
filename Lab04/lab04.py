@@ -80,12 +80,13 @@ def cash_money(money):
     >>> cash_money(9999999.99)
     [99999, 1, 2, 0, 1, 2, 0, 3, 2, 0, 4]
     """
+    money *= 100
     denominations = [100, 50, 20, 10, 5, 2, 1, 0.25, 0.10, 0.05, 0.01]
     breakdown = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     for i in range(len(denominations)):
-        if money >= denominations[i]:
-            breakdown[i] = int(money // denominations[i])
-            money %= denominations[i]
+        if money >= denominations[i]*100:
+            breakdown[i] = int(money // (denominations[i]*100))
+            money %= denominations[i]*100
     return breakdown
 
 
