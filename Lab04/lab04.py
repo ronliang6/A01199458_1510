@@ -32,6 +32,24 @@ def eratosthenes(upperbound):
 
 
 def delete_multiples_of(numbers_list, prime):
+    """
+    Delete all multiples of a number in a list except that number itself.
+
+    :param numbers_list: A list of one or more positive integers.
+    :param prime: A positive integer.
+    :precondition: provide the function with valid arguments as defined by the PARAM statements above.
+    :postcondition: return an object as defined by the return statement below.
+    :return: A list with zero or more positive integers.
+
+    >>> delete_multiples_of([1], 1)
+    [1]
+    >>> delete_multiples_of([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)
+    [1, 2, 3, 5, 7, 9]
+    >>> delete_multiples_of([1, 4, 7, 12], 72)
+    [1, 4, 7, 12]
+    >>> delete_multiples_of([2, 6, 7, 212], 5)
+    [2, 6, 7, 212]
+    """
     numbers_to_delete = []
 
     for i in range(len(numbers_list)):
