@@ -14,13 +14,13 @@ def eratosthenes(upperbound):
     >>> eratosthenes(1)
     []
     >>> eratosthenes(3)
-    [2]
+    [2, 3]
     >>> eratosthenes(10)
     [2, 3, 5, 7]
     >>> eratosthenes(100)
     [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     """
-    numbers_list = list(range(2, upperbound))
+    numbers_list = list(range(2, upperbound + 1))
     position = 0
 
     if upperbound > 2:
@@ -74,7 +74,7 @@ def cash_money(money):
     >>> cash_money(0.01)
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
     >>> cash_money(88.68)
-    [0, 1, 1, 1, 1, 1, 1, 2, 1
+    [0, 1, 1, 1, 1, 1, 1, 2, 1, 1, 3]
     >>> cash_money(9999999.99)
     [99999, 1, 2, 0, 1, 2, 0, 3, 2, 0, 4]
     """
