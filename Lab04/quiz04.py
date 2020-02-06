@@ -18,12 +18,16 @@ def statistics(stats_list):
     :postcondition: return an object as defined by the return statement below.
     :return: a list of five floats that represent statistics about the given list.
 
+    >>> statistics([1, 2, 3, 4, 5, 6, 7])
+    [7.0, 1.0, 7.0, 4.0, 6.0]
+    >>> statistics([1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0])
+    [7.0, 1.0, 7.0, 4.0, 6.0]
     >>> statistics([-1.2, 56, -24, 1.1, 0])
     [5.0, -24.0, 56.0, 6.38, 80.0]
     >>> statistics([0])
     [1.0, 0.0, 0.0, 0.0, 0.0]
-    >>> statistics([-1.75, -332, -23, -4.122, -45, -6, -7])
-    [7.0, -332.0, -1.75, -59.838857142857144, 330.25]
+    >>> statistics([-1.75, -332, -23, -4.122, -45, -6, -7, -73.8, -900, 442])
+    [10.0, -900.0, 442.0, -95.0672, 1342.0]
     >>> statistics([1, 2.2, 2.8, 3.5, 5.5, 6, 7])
     [7.0, 1.0, 7.0, 4.0, 6.0]
     >>> statistics([])
