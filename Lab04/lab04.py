@@ -73,12 +73,40 @@ def cash_money(money):
     :postcondition: Return an object as defined by the return statement below.
     :return: A list of eleven integers representing the number of each denomination.
 
+    >>> cash_money(0.00)
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     >>> cash_money(0.01)
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
-    >>> cash_money(188.68)
-    [1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 3]
-    >>> cash_money(9999999.99)
-    [99999, 1, 2, 0, 1, 2, 0, 3, 2, 0, 4]
+    >>> cash_money(0.02)
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
+    >>> cash_money(0.05)
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+    >>> cash_money(0.10)
+    [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+    >>> cash_money(0.25)
+    [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+    >>> cash_money(1.00)
+    [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+    >>> cash_money(1.05)
+    [0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0]
+    >>> cash_money(2.00)
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+    >>> cash_money(5.00)
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+    >>> cash_money(10.00)
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+    >>> cash_money(10.27)
+    [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2]
+    >>> cash_money(20.00)
+    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+    >>> cash_money(50.00)
+    [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    >>> cash_money(100.00)
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    >>> cash_money(100.57)
+    [1, 0, 0, 0, 0, 0, 0, 2, 0, 1, 2]
+    >>> cash_money(188.41)
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     """
     money *= 100
     denominations = [100, 50, 20, 10, 5, 2, 1, 0.25, 0.10, 0.05, 0.01]
