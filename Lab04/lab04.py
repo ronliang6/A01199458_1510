@@ -31,12 +31,12 @@ def eratosthenes(upperbound):
     return numbers_list
 
 
-def delete_multiples_of(numbers_list, prime):
+def delete_multiples_of(numbers_list, number):
     """
     Delete all multiples of a number in a list except that number itself.
 
     :param numbers_list: A list of one or more positive integers.
-    :param prime: A positive integer.
+    :param number: A positive integer.
     :precondition: provide the function with valid arguments as defined by the PARAM statements above.
     :postcondition: return an object as defined by the return statement below.
     :return: A list with zero or more positive integers.
@@ -49,12 +49,14 @@ def delete_multiples_of(numbers_list, prime):
     [1, 4, 7, 12]
     >>> delete_multiples_of([2, 6, 7, 212], 5)
     [2, 6, 7, 212]
+    >>> delete_multiples_of([10, 15, 20, 25], 5)
+    []
     """
     numbers_to_delete = []
 
     for i in range(len(numbers_list)):
         # For each integer in the list that is divisible by prime but is not prime, add that integer to a list
-        if numbers_list[i] % prime == 0 and numbers_list[i] != prime:
+        if numbers_list[i] % number == 0 and numbers_list[i] != number:
             numbers_to_delete.append(numbers_list[i])
 
     for i in range(len(numbers_to_delete)):
