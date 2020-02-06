@@ -1,3 +1,6 @@
+"""
+Solve a variety of problems with a variety of tools.
+"""
 import doctest
 import math
 
