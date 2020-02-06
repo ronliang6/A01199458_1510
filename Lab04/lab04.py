@@ -68,7 +68,7 @@ def cash_money(money):
     """
     Calculate the largest denominations of bills and coins that can represent the money inputted as a float.
 
-    :param money: A positive float.
+    :param money: A positive float with with no more than two decimal places.
     :precondition: Provide the function with a valid argument as defined by the PARAM statement above.
     :postcondition: Return an object as defined by the return statement below.
     :return: A list of eleven integers representing the number of each denomination.
