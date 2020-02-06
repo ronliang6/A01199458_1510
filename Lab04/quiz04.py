@@ -12,6 +12,7 @@ def statistics(stats_list):
     The statistics returned include the number of elements in the list, the minimum value in that list, the maximum
     value in that list, the average value in that list, and the range of the list (the difference between the maximum
     and minimum.)
+
     :param stats_list: a list that contains zero or more integers and floats.
     :precondition: provide valid arguments according to the PARAM statement above.
     :postcondition: return an object as defined by the return statement below.
