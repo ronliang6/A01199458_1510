@@ -13,8 +13,8 @@ def eratosthenes(upperbound):
 
     >>> eratosthenes(1)
     []
-    >>> eratosthenes(3)
-    [2, 3]
+    >>> eratosthenes(2)
+    [2]
     >>> eratosthenes(10)
     [2, 3, 5, 7]
     >>> eratosthenes(100)
