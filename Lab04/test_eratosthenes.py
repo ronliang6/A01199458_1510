@@ -20,9 +20,9 @@ class Test(TestCase):
     def test_list_of_several(self):
         """Test an upper bound that returns a list of many integers."""
 
-        argument = lab04.eratosthenes(10)
-        expected = [2, 3, 5, 7]
-        self.assertEqual(expected, argument, "The list contains four prime integers.")
+        argument = lab04.eratosthenes(31)
+        expected = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]
+        self.assertEqual(expected, argument, "The list contains eleven prime integers.")
 
     def test_list_of_many(self):
         """Test an upper bound that returns a list of many integers."""
