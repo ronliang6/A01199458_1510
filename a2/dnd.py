@@ -82,12 +82,12 @@ def create_character(syllables):
                      "XP": 0,
                      "Class": select_class(),
                      "Race": select_race()}
-        character_health = hp_initializer(character["Class"])
+        character_health = roll_hit_dice(character["Class"])
         character["HP"] = [character_health, character_health]
         return character
 
 
-def hp_initializer(character_class):
+def roll_hit_dice(character_class):
     """
     Generate the starting health for a character based on it's class.
 
@@ -145,6 +145,11 @@ def print_character(character):
 
 
 def choose_inventory(character):
+    """
+    TODO
+    :param character:
+    :return:
+    """
     shop_message = """    Welcome to the Potion Seller's Store!
     You cannot handle my strongest potions..
     
@@ -172,6 +177,44 @@ def choose_inventory(character):
             print("Please enter an integer in the range [1,5] or -1.")
             purchase = input(shop_message)
     character["Inventory"].extend(shopping_basket)
+
+
+def combat_round(opponent_one, opponent_two):
+    """
+
+    :param opponent_one: a well-formed dictionary representing a character.
+    :param opponent_two: a well-formed dictionary representing a character.
+    :return:
+    """
+    initiative_one = roll_die(1, 20)
+    print(opponent_one["Name"] + " has rolled " + initiative_one + " for initiative!")
+    initiative_two = roll_die(1, 20)
+    print(opponent_two["Name"] + " has rolled " + initiative_two + " for initiative!")
+    while initiative_one == initiative_two:
+        print("Their agility is a match. " + opponent_one["Name"] + " and " + opponent_two["Name"] +
+              " watch each other intently, waiting for an opening.")
+        initiative_one = roll_die(1, 20)
+        print(opponent_one["Name"] + " has rolled " + initiative_one + " for initiative!")
+        initiative_two = roll_die(1, 20)
+        print(opponent_two["Name"] + " has rolled " + initiative_two + " for initiative!")
+    if initiative_one > initiative_two:
+        print(opponent_one["Name"] + "'s combat prowess seizes the initiative!")
+        if roll_die(1, 20) > opponent_two["Dexterity"]:
+            damage = opponent_one[roll_hit_dice(opponent_one["Class"])]
+            opponent_two["HP"][1] -= damage
+            print(opponent_two["Name"] + " has been struck for " + damage + "damage.")
+            if opponent_two["HP"][1] <= 0:
+                print(opponent_two["Name"] + " has died!")
+            else:
+                print(opponent_two["Name"] + " has " + opponent_two["HP"][1] + " HP left!")
+                if roll_die(1, 20) > opponent_one["Dexterity"]:
+                    damage = opponent_two[roll_hit_dice(opponent_one["Class"])]
+                    opponent_one["HP"][1] -= damage
+                    print(opponent_one["Name"] + " has been struck for " + damage + "damage.")
+                    if opponent_one["HP"][1] <= 0:
+                        print(opponent_one["Name"] + " has died!")
+                    else:
+                        print(opponent_one["Name"] + " has " + opponent_one["HP"][1] + " HP left!")
 
 
 def main():
