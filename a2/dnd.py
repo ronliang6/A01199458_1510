@@ -71,13 +71,25 @@ def create_character(syllables):
         print("You have failed to enter a positive integer.")
     else:
         name = generate_name(syllables)
-        character = {"Name": name}
+        strength = roll_die(3, 6)
+        intelligence = roll_die(3, 6)
+        wisdom = roll_die(3, 6)
+        dexterity = roll_die(3, 6)
+        constitution = roll_die(3, 6)
+        charisma = roll_die(3, 6)
+        character = {"Name": name,
+                     "Strength": strength,
+                     "Intelligence": intelligence,
+                     "Wisdom": wisdom,
+                     "Dexterity": dexterity,
+                     "Constitution": constitution,
+                     "Charisma": charisma}
         return character
 
 
 def main():
     doctest.testmod()
-    print(generate_name(19))
+    print(roll_die(1, 10))
 
 
 if __name__ == "__main__":
