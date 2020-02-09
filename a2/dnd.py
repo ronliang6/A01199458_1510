@@ -67,10 +67,10 @@ def generate_consonant():
 
 
 def create_character(syllables):
-    if type(syllables) != int or syllables <= 0:
+    if not syllables.isdigit() or int(syllables) <= 0:
         print("You have failed to enter a positive integer.")
     else:
-        name = generate_name(syllables)
+        name = generate_name(int(syllables))
         character = {"Name": name,
                      "Strength": roll_die(3, 6),
                      "Intelligence": roll_die(3, 6),
@@ -171,7 +171,7 @@ def choose_inventory(character):
     purchase = input(shop_message)
     while purchase != "-1":
         if purchase.isdigit() and int(purchase) in [1, 2, 3, 4, 5]:
-            shopping_basket.append(items[int(purchase)-1])
+            shopping_basket.append(items[int(purchase) - 1])
             purchase = input(shop_message)
         else:
             print("Please enter an integer in the range [1,5] or -1.")
@@ -202,26 +202,28 @@ def combat_round(opponent_one, opponent_two):
 
 
 def roll_initiative(name_one, name_two):
-
     initiative_one = roll_die(1, 20)
-    print(name_one + " has rolled " + initiative_one + " for initiative!")
+    print(name_one + " has rolled " + str(initiative_one) + " for initiative!")
     initiative_two = roll_die(1, 20)
-    print(name_two + " has rolled " + initiative_two + " for initiative!")
+    print(name_two + " has rolled " + str(initiative_two) + " for initiative!")
     while initiative_one == initiative_two:
         print("Their agility is a match. " + name_one + " and " + name_two +
               " watch each other intently, waiting for an opening.")
         initiative_one = roll_die(1, 20)
-        print(name_one + " has rolled " + initiative_one + " for initiative!")
+        print(name_one + " has rolled " + str(initiative_one) + " for initiative!")
         initiative_two = roll_die(1, 20)
-        print(name_two + " has rolled " + initiative_two + " for initiative!")
-    if initiative_one > initiative_one:
+        print(name_two + " has rolled " + str(initiative_two) + " for initiative!")
+    if initiative_one > initiative_two:
         return name_one
     else:
         return name_two
 
 
 def roll_to_hit(attacker, defender):
-    if roll_die(1, 20) > defender["Dexterity"]:
+    to_hit = roll_die(1, 20)
+    print(attacker["Name"] + " has rolled " + str(to_hit) + " to hit against the defender's dexterity of " +
+          str(defender["Dexterity"]) + ".")
+    if to_hit > defender["Dexterity"]:
         roll_for_damage(attacker, defender)
     else:
         print(attacker["Name"] + " fumbles his strike and misses!")
@@ -230,7 +232,7 @@ def roll_to_hit(attacker, defender):
 def roll_for_damage(attacker, defender):
     damage = roll_hit_dice(attacker["Class"])
     defender["HP"][1] -= damage
-    print(defender["Name"] + " has been struck for " + damage + "damage.")
+    print(defender["Name"] + " has been struck for " + str(damage) + "damage.")
 
 
 def check_alive(character):
@@ -238,16 +240,31 @@ def check_alive(character):
         print(character["Name"] + " has died!")
         alive = False
     else:
-        print(character["Name"] + " has " + character["HP"][1] + " HP left!")
+        print(character["Name"] + " has " + str(character["HP"][1]) + " HP left!")
         alive = True
     return alive
 
 
 def main():
     doctest.testmod()
-    x = {"Inventory": []}
-    choose_inventory(x)
-    print(x)
+    syllables = input("How many syllables would you like your character to have?")
+    player_character = create_character(syllables)
+    print_character(player_character)
+    choose_inventory(player_character)
+    print_character(player_character)
+    enemy_character = {"Name": "Solar",
+                       "Strength": 26,
+                       "Intelligence": 25,
+                       "Wisdom": 25,
+                       "Dexterity": 14,
+                       "Constitution": 26,
+                       "Charisma": 30,
+                       "Inventory": ["Angelic Weapons", "Divine Awareness", "Innate Spellcasting"],
+                       "XP": 33000,
+                       "Class": "Paladin",
+                       "Race": "human",
+                       "HP": [35, 35]}
+    combat_round(player_character, enemy_character)
 
 
 if __name__ == "__main__":
