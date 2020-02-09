@@ -144,9 +144,41 @@ def print_character(character):
     print(character)
 
 
+def choose_inventory(character):
+    shop_message = """    Welcome to the Potion Seller's Store!
+    You cannot handle my strongest potions..
+    
+    So here are some non-potion wares!
+    
+    1. Short Sword + 10
+    2. Armor of Invulnerability
+    3. Ring of Three Wishes
+    4. Beretta M9A1 with 60 Rounds of 9mm Ammunition
+    5. Potion Seller's Store
+    
+    What would you like to buy?
+    (Please enter a list number to buy that item or -1 to leave my store)"""
+
+    items = ["Short Sword + 10", "Armor of Invulnerability", "Ring of Three Wishes",
+             "Beretta M9A1 with 60 Rounds of 9mm Ammunition", "Potion Seller's Store"]
+    shopping_basket = []
+
+    purchase = input(shop_message)
+    while purchase != "-1":
+        if purchase.isdigit() and int(purchase) in [1, 2, 3, 4, 5]:
+            shopping_basket.append(items[int(purchase)-1])
+            purchase = input(shop_message)
+        else:
+            print("Please enter an integer in the range [1,5] or -1.")
+            purchase = input(shop_message)
+    character["Inventory"].extend(shopping_basket)
+
+
 def main():
     doctest.testmod()
-    print_character(create_character(1))
+    x = {"Inventory": []}
+    choose_inventory(x)
+    print(x)
 
 
 if __name__ == "__main__":
