@@ -186,35 +186,61 @@ def combat_round(opponent_one, opponent_two):
     :param opponent_two: a well-formed dictionary representing a character.
     :return:
     """
+    initiative = roll_initiative(opponent_one["Name"], opponent_two["Name"])
+    if initiative == opponent_one["Name"]:
+        print(opponent_one["Name"] + "'s combat prowess seizes the initiative!")
+        roll_to_hit(opponent_one, opponent_two)
+        if check_alive(opponent_two):
+            roll_to_hit(opponent_two, opponent_one)
+            check_alive(opponent_one)
+    else:
+        print(opponent_two["Name"] + "'s combat prowess seizes the initiative!")
+        roll_to_hit(opponent_two, opponent_one)
+        if check_alive(opponent_one):
+            roll_to_hit(opponent_one, opponent_two)
+            check_alive(opponent_two)
+
+
+def roll_initiative(name_one, name_two):
+
     initiative_one = roll_die(1, 20)
-    print(opponent_one["Name"] + " has rolled " + initiative_one + " for initiative!")
+    print(name_one + " has rolled " + initiative_one + " for initiative!")
     initiative_two = roll_die(1, 20)
-    print(opponent_two["Name"] + " has rolled " + initiative_two + " for initiative!")
+    print(name_two + " has rolled " + initiative_two + " for initiative!")
     while initiative_one == initiative_two:
-        print("Their agility is a match. " + opponent_one["Name"] + " and " + opponent_two["Name"] +
+        print("Their agility is a match. " + name_one + " and " + name_two +
               " watch each other intently, waiting for an opening.")
         initiative_one = roll_die(1, 20)
-        print(opponent_one["Name"] + " has rolled " + initiative_one + " for initiative!")
+        print(name_one + " has rolled " + initiative_one + " for initiative!")
         initiative_two = roll_die(1, 20)
-        print(opponent_two["Name"] + " has rolled " + initiative_two + " for initiative!")
-    if initiative_one > initiative_two:
-        print(opponent_one["Name"] + "'s combat prowess seizes the initiative!")
-        if roll_die(1, 20) > opponent_two["Dexterity"]:
-            damage = opponent_one[roll_hit_dice(opponent_one["Class"])]
-            opponent_two["HP"][1] -= damage
-            print(opponent_two["Name"] + " has been struck for " + damage + "damage.")
-            if opponent_two["HP"][1] <= 0:
-                print(opponent_two["Name"] + " has died!")
-            else:
-                print(opponent_two["Name"] + " has " + opponent_two["HP"][1] + " HP left!")
-                if roll_die(1, 20) > opponent_one["Dexterity"]:
-                    damage = opponent_two[roll_hit_dice(opponent_one["Class"])]
-                    opponent_one["HP"][1] -= damage
-                    print(opponent_one["Name"] + " has been struck for " + damage + "damage.")
-                    if opponent_one["HP"][1] <= 0:
-                        print(opponent_one["Name"] + " has died!")
-                    else:
-                        print(opponent_one["Name"] + " has " + opponent_one["HP"][1] + " HP left!")
+        print(name_two + " has rolled " + initiative_two + " for initiative!")
+    if initiative_one > initiative_one:
+        return name_one
+    else:
+        return name_two
+
+
+def roll_to_hit(attacker, defender):
+    if roll_die(1, 20) > defender["Dexterity"]:
+        roll_for_damage(attacker, defender)
+    else:
+        print(attacker["Name"] + " fumbles his strike and misses!")
+
+
+def roll_for_damage(attacker, defender):
+    damage = roll_hit_dice(attacker["Class"])
+    defender["HP"][1] -= damage
+    print(defender["Name"] + " has been struck for " + damage + "damage.")
+
+
+def check_alive(character):
+    if character["HP"][1] <= 0:
+        print(character["Name"] + " has died!")
+        alive = False
+    else:
+        print(character["Name"] + " has " + character["HP"][1] + " HP left!")
+        alive = True
+    return alive
 
 
 def main():
