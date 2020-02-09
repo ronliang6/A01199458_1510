@@ -2,6 +2,13 @@ import doctest
 import random
 
 
+def roll_die(number_of_rolls, number_of_sides):
+    dice_sum = 0
+    for i in range(number_of_rolls):
+        dice_sum += random.randint(1, number_of_sides)
+    return dice_sum
+
+
 def generate_name(syllables):
     """
     Generate a simple random name of alternating consonants and vowels.
