@@ -3,6 +3,15 @@ import random
 
 
 def roll_die(number_of_rolls, number_of_sides):
+    """
+    Simulate rolling dice with a chosen number of sides a chosen number of times.
+
+    :param number_of_rolls: a positive integer representing the number of times the dice should be rolled.
+    :param number_of_sides: a positive integer representing the number of sides the dice have.
+    :precondition: provide valid arguments to the function as defined by the PARAM statements above.
+    :postcondition: return an object as defined by the return statement below.
+    :return: a positive integer representing the sum of the dice rolls.
+    """
     dice_sum = 0
     for i in range(number_of_rolls):
         dice_sum += random.randint(1, number_of_sides)
@@ -55,6 +64,15 @@ def generate_consonant():
     :return: a string of length one that is a consonant (including y).
     """
     return random.choice("bcdfghjklmnpqrstvwxyz")
+
+
+def create_character(syllables):
+    if type(syllables) != int or syllables <= 0:
+        print("You have failed to enter a positive integer.")
+    else:
+        name = generate_name(syllables)
+        character = {"Name": name}
+        return character
 
 
 def main():
