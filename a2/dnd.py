@@ -71,19 +71,15 @@ def create_character(syllables):
         print("You have failed to enter a positive integer.")
     else:
         name = generate_name(syllables)
-        strength = roll_die(3, 6)
-        intelligence = roll_die(3, 6)
-        wisdom = roll_die(3, 6)
-        dexterity = roll_die(3, 6)
-        constitution = roll_die(3, 6)
-        charisma = roll_die(3, 6)
         character = {"Name": name,
-                     "Strength": strength,
-                     "Intelligence": intelligence,
-                     "Wisdom": wisdom,
-                     "Dexterity": dexterity,
-                     "Constitution": constitution,
-                     "Charisma": charisma}
+                     "Strength": roll_die(3, 6),
+                     "Intelligence": roll_die(3, 6),
+                     "Wisdom": roll_die(3, 6),
+                     "Dexterity": roll_die(3, 6),
+                     "Constitution": roll_die(3, 6),
+                     "Charisma": roll_die(3, 6),
+                     "Inventory": [],
+                     "XP": 0}
         return character
 
 
