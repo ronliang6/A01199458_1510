@@ -83,6 +83,20 @@ def create_character(syllables):
         return character
 
 
+def select_class():
+    """
+    Ask the user to select a class and then return that class as a string.
+
+    :precondition: TODO
+    :postcondition: return an object as defined by the return statement below.
+    :return: a string representing the class of the character.
+    """
+    character_class = input("Please pick a class from the following list: "
+                            "Fighter, Rogue, Monk, Ranger, Wizard, Warlock, Sorcerer, Cleric, Druid, Bard, Barbarian, "
+                            "Paladin.")
+    return character_class
+
+
 def main():
     doctest.testmod()
     print(roll_die(1, 10))
