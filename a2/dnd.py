@@ -82,7 +82,7 @@ def create_character(syllables):
                      "XP": 0}
         return character
 
-
+e
 def select_class():
     """
     Ask the user to select a class and then return that class as a string.
