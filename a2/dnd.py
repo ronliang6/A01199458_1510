@@ -46,7 +46,7 @@ def generate_syllable():
 
 def generate_vowel():
     """
-    Return a random vowel (including "y").
+    Generate and return a random vowel (including "y").
 
     :precondition: provide the function with no arguments.
     :postcondition: return an object as defined by the return statement below.
@@ -57,7 +57,7 @@ def generate_vowel():
 
 def generate_consonant():
     """
-    Return a random consonant (including y).
+    Generate and return a random consonant (including y).
 
     :precondition: provide the function with no arguments.
     :postcondition: return an object as defined by the return statement below.
@@ -79,8 +79,31 @@ def create_character(syllables):
                      "Constitution": roll_die(3, 6),
                      "Charisma": roll_die(3, 6),
                      "Inventory": [],
-                     "XP": 0}
+                     "XP": 0,
+                     "Class": select_class(),
+                     "Race": select_race()}
+        character_health = hp_initializer(character["Class"])
+        character["HP"] = [character_health, character_health]
         return character
+
+
+def hp_initializer(character_class):
+    """
+    Generate the starting health for a character based on it's class.
+
+    :param character_class: a string that is a Dungeons and Dragons class in lower case letters.
+    :precondition: provide the function with a valid argument as defined by the PARAM statement above.
+    :postcondition: return an object as defined by the return statement below.
+    :return: an integer representing the starting health of that character.
+    """
+    if character_class == "barbarian":
+        return roll_die(1, 12)
+    elif character_class in ["fighter", "paladin", "ranger"]:
+        return roll_die(1, 10)
+    elif character_class in ["bard", "cleric", "druid", "monk", "rogue", "warlock"]:
+        return roll_die(1, 8)
+    else:
+        return roll_die(1, 6)
 
 
 def select_class():
@@ -93,8 +116,25 @@ def select_class():
     """
     character_class = input("Please pick a class from the following list: "
                             "Fighter, Rogue, Monk, Ranger, Wizard, Warlock, Sorcerer, Cleric, Druid, Bard, Barbarian, "
-                            "Paladin.")
-    return character_class
+                            "and Paladin.")
+    return character_class.lower()
+
+
+def select_race():
+    """
+    Ask the user to select a race and then return that race as a string.
+
+    :precondition: TODO
+    :postcondition: return an object as defined by the return statement below.
+    :return: a string representing the race of the character.
+    """
+    character_race = input("Please pick a class from the following list: "
+                           "Tiefling, Dragonborn, Human, Half-Elf, Elf, Dwarf, Gnome, Halfling, and Half-Orc.")
+    return character_race.lower()
+
+
+def print_character(character):
+    print(character)
 
 
 def main():
