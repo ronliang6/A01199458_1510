@@ -134,12 +134,19 @@ def select_race():
 
 
 def print_character(character):
+    """
+    Print the provided argument.
+
+    :param character: a printable object.
+    :precondition: provide the function with a valid argument as defined by the PARAM statement above.
+    :postcondition: print the provided argument.
+    """
     print(character)
 
 
 def main():
     doctest.testmod()
-    print(roll_die(1, 10))
+    print_character(create_character(1))
 
 
 if __name__ == "__main__":
