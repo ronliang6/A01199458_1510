@@ -155,17 +155,17 @@ def choose_inventory(character):
     
     So here are some non-potion wares!
     
-    1. Short Sword + 10
-    2. Armor of Invulnerability
-    3. Ring of Three Wishes
-    4. Beretta M9A1 with 60 Rounds of 9mm Ammunition
+    1. Chris Thompson
+    2. Ring of Three Wishes
+    3. Twelve Mostly-Empty Xerox Printer Cartridges
+    4. Your Local Politician
     5. Potion Seller's Store
     
     What would you like to buy?
     (Please enter a list number to buy that item or -1 to leave my store)"""
 
-    items = ["Short Sword + 10", "Armor of Invulnerability", "Ring of Three Wishes",
-             "Beretta M9A1 with 60 Rounds of 9mm Ammunition", "Potion Seller's Store"]
+    items = ["Chris Thompson", "Ring of Three Wishes", "Twelve Mostly-Empty Xerox Printer Cartridges",
+             "Your Local Politician", "Potion Seller's Store"]
     shopping_basket = []
 
     purchase = input(shop_message)
@@ -190,15 +190,15 @@ def combat_round(opponent_one, opponent_two):
     if initiative == opponent_one["Name"]:
         print(opponent_one["Name"] + "'s combat prowess seizes the initiative!")
         roll_to_hit(opponent_one, opponent_two)
-        if check_alive(opponent_two):
+        if is_alive(opponent_two):
             roll_to_hit(opponent_two, opponent_one)
-            check_alive(opponent_one)
+            is_alive(opponent_one)
     else:
         print(opponent_two["Name"] + "'s combat prowess seizes the initiative!")
         roll_to_hit(opponent_two, opponent_one)
-        if check_alive(opponent_one):
+        if is_alive(opponent_one):
             roll_to_hit(opponent_one, opponent_two)
-            check_alive(opponent_two)
+            is_alive(opponent_two)
 
 
 def roll_initiative(name_one, name_two):
@@ -232,10 +232,10 @@ def roll_to_hit(attacker, defender):
 def roll_for_damage(attacker, defender):
     damage = roll_hit_dice(attacker["Class"])
     defender["HP"][1] -= damage
-    print(defender["Name"] + " has been struck for " + str(damage) + "damage.")
+    print(defender["Name"] + " has been struck for " + str(damage) + " damage.")
 
 
-def check_alive(character):
+def is_alive(character):
     if character["HP"][1] <= 0:
         print(character["Name"] + " has died!")
         alive = False
