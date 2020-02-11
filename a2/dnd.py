@@ -79,9 +79,11 @@ def create_character(syllables):
                      "Constitution": roll_die(3, 6),
                      "Charisma": roll_die(3, 6),
                      "Inventory": [],
-                     "XP": 0,
-                     "Class": select_class(),
-                     "Race": select_race()}
+                     "XP": 0}
+        print("Your character so far is: ")
+        print_character(character)
+        character["Class"] = select_class(),
+        character["Race"] = select_race()
         character_health = roll_hit_dice(character["Class"])
         character["HP"] = [character_health, character_health]
         return character
