@@ -37,7 +37,7 @@ def generate_name(syllables):
     name = ""
     for i in range(syllables):
         name += generate_syllable()
-    return name
+    return name.title()
 
 
 def generate_syllable():
@@ -89,7 +89,9 @@ def create_character(syllables):
     same value every time. The class and race are chosen from a list of predefined values.
 
     :param syllables: a positive integer representing the desired syllables in the character name.
-    :return: a 
+    :precondition: provide the function with valid a argument according to the PARAM statement above.
+    :postcondition: return an object as defined by the return statement below.
+    :return: a dictionary representing a properly formatted Dungeons and Dragons character.
     """
     if not syllables.isdigit() or int(syllables) <= 0:
         print("You have failed to enter a positive integer.")
@@ -136,9 +138,9 @@ def select_class():
     """
     Ask the user to select a class and then return that class as a string.
 
-    :precondition: TODO
+    :precondition: the user eventually selects an integer in the range [1,12].
     :postcondition: return an object as defined by the return statement below.
-    :return: a string representing the class of the character.
+    :return: a string representing the class of the character in lowercase.
     """
     classes = ["Fighter", "Rogue", "Monk", "Ranger", "Wizard", "Warlock", "Sorcerer", "Cleric", "Druid", "Bard",
                "Barbarian", "Paladin"]
@@ -161,9 +163,9 @@ def select_race():
     """
     Ask the user to select a race and then return that race as a string.
 
-    :precondition: TODO
+    :precondition: the user eventually selects an integer in the range [1,9].
     :postcondition: return an object as defined by the return statement below.
-    :return: a string representing the race of the character.
+    :return: a string representing the race of the character in lowercase.
     """
 
     races = ["Tiefling", "Dragonborn", "Human", "Half-Elf", "Elf", "Dwarf", "Gnome", "Halfling", "Half-Orc"]
@@ -184,20 +186,28 @@ def select_race():
 
 def print_character(character):
     """
-    Print the provided argument.
+    Print an easy to read summary of a well-formatted Dungeons and Dragons character (a dictionary).
 
-    :param character: a printable object.
+    :param character: a well formatted Dungeons and Dragons character.
     :precondition: provide the function with a valid argument as defined by the PARAM statement above.
-    :postcondition: print the provided argument.
+    :postcondition: print the provided argument in an easy to read manner.
     """
-    print(character)
+    for key in character:
+        if key == "Inventory":
+            print(key + ":")
+            for item in character[key]:
+                print(item)
+        else:
+            print(key + ": " + str(character[key]))
 
 
 def choose_inventory(character):
     """
-    TODO
-    :param character:
-    :return:
+    Offer items to add to a character's inventory, given a well formatted Dungeons and Dragons character.
+
+    :param character: a well formatted Dungeons and Dragons character.
+    :precondition: the user eventually enters -1 as an input.
+    :postcondition: adds the items selected to the character's inventory as strings in a list.
     """
     shop_message = """    Welcome to the Potion Seller's Store!
     You cannot handle my strongest potions..
@@ -238,10 +248,15 @@ def choose_inventory(character):
 
 def combat_round(opponent_one, opponent_two):
     """
+    Simulates one round of combat between two well-formed Dungeons and Dragons characters.
 
-    :param opponent_one: a well-formed dictionary representing a character.
-    :param opponent_two: a well-formed dictionary representing a character.
-    :return:
+    Combat involves the characters rolling 1d20 to see who has the higher initiative. The higher initiative character
+    then rolls to hit, which involves rolling 1d20 against the other character's dexterity. If the attacker hits,
+    damage is rolled, then if the defender is still alive, the defender rolls to hit and if hit, does damage.
+    :param opponent_one: a well-formed dictionary representing a character, where that character's HP is > 0.
+    :param opponent_two: a well-formed dictionary representing a character, where that character's HP is > 0.
+    :precondition: provide the function with arguments according to the PARAM statements above.
+    :postcondition: print details about the combat and update the characters' HPs if necessary.
     """
     initiative = roll_initiative(opponent_one["Name"], opponent_two["Name"])
     if initiative == opponent_one["Name"]:
@@ -259,6 +274,15 @@ def combat_round(opponent_one, opponent_two):
 
 
 def roll_initiative(name_one, name_two):
+    """
+    Roll initiative twice and pick the higher roll as the winner, while re-rolling ties.
+
+    :param name_one: a string representing the name of a competitor.
+    :param name_two: a string representing the name of a competitor.
+    :precondition: provide the function with valid arguments according to the PARAM statements above.
+    :postcondition: return an object as defined by the return statement below.
+    :return: a string that is one of the two parameters, representing the winner.
+    """
     initiative_one = roll_die(1, 20)
     print(name_one + " has rolled " + str(initiative_one) + " for initiative!")
     initiative_two = roll_die(1, 20)
@@ -277,6 +301,14 @@ def roll_initiative(name_one, name_two):
 
 
 def roll_to_hit(attacker, defender):
+    """
+    Determines if an attacker has hit a defender and deals damage accordingly.
+
+    :param attacker: a well-formed dictionary representing a character.
+    :param defender: a well-formed dictionary representing a character.
+    :precondition: provide the function with valid arguments according to the PARAM statements above.
+    :postcondition: print details about combat and update the defender's current HP if necessary.
+    """
     to_hit = roll_die(1, 20)
     print(attacker["Name"] + " has rolled " + str(to_hit) + " to hit against the defender's dexterity of " +
           str(defender["Dexterity"]) + ".")
@@ -287,12 +319,28 @@ def roll_to_hit(attacker, defender):
 
 
 def roll_for_damage(attacker, defender):
+    """
+    Rolls for damage based on the attacker's class and subtracts that damage from the defender's current HP.
+
+    :param attacker: a well-formed dictionary representing a character.
+    :param defender: a well-formed dictionary representing a character.
+    :precondition: provide the function with valid arguments according to the PARAM statements above.
+    :postcondition: update the defender's current HP.
+    """
     damage = roll_hit_dice(attacker["Class"])
     defender["HP"][1] -= damage
     print(defender["Name"] + " has been struck for " + str(damage) + " damage.")
 
 
 def is_alive(character):
+    """
+    Determine if a character is alive (1 or more current HP).
+
+    :param character: a well-formed Dungeons and Dragons character.
+    :precondition: provide the function with a valid argument according to the PARAM statement above.
+    :postcondition: return an object as defined by the return statement below.
+    :return: a boolean value representing whether or not the character is alive.
+    """
     if character["HP"][1] <= 0:
         print(character["Name"] + " has died!")
         alive = False
@@ -303,6 +351,9 @@ def is_alive(character):
 
 
 def main():
+    """
+    Demonstrate the functions in this module.
+    """
     doctest.testmod()
     syllables = input("How many syllables would you like your character to have?")
     player_character = create_character(syllables)
