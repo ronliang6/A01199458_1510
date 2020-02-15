@@ -22,7 +22,7 @@ class Test(TestCase):
                              "HP": [35, 35]})
         expected = "Name: Solar\nStrength: 26\nIntelligence: 25\nWisdom: 25\nDexterity: 14\nConstitution: 26\n" \
                    "Charisma: 30\nInventory:\nAngelic Weapons\nDivine Awareness\nInnate Spellcasting\nXP: 33000\n" \
-                   "Class: Paladin\nRace: human\nHP: [35, 35]\n"
+                   "Class: Paladin\nRace: human\nHP: 35/35\n"
         self.assertEqual(output.getvalue(), expected)
 
     @patch('sys.stdout', new_callable=io.StringIO)
@@ -40,5 +40,5 @@ class Test(TestCase):
                              "Race": "human",
                              "HP": [35, 35]})
         expected = "Name: Solar\nStrength: 26\nIntelligence: 25\nWisdom: 25\nDexterity: 14\nConstitution: 26\n" \
-                   "Charisma: 30\nInventory:\nXP: 33000\nClass: Paladin\nRace: human\nHP: [35, 35]\n"
+                   "Charisma: 30\nInventory:\nXP: 33000\nClass: Paladin\nRace: human\nHP: 35/35\n"
         self.assertEqual(output.getvalue(), expected)
