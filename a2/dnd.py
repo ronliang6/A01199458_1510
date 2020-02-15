@@ -198,7 +198,7 @@ def print_character(character):
             for item in character[key]:
                 print(item)
         elif key == "HP":
-            print(key + ": " + str(character[key][0]) + "/" + str(character[key][0]))
+            print(key + ": " + str(character[key][1]) + "/" + str(character[key][0]))
         else:
             print(key + ": " + str(character[key]))
 
