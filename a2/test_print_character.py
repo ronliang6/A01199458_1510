@@ -17,7 +17,7 @@ class Test(TestCase):
                              "Charisma": 30,
                              "Inventory": ["Angelic Weapons", "Divine Awareness", "Innate Spellcasting"],
                              "XP": 33000,
-                             "Class": "Paladin",
+                             "Class": "paladin",
                              "Race": "human",
                              "HP": [35, 10]})
         expected = "Name: Solar\nStrength: 26\nIntelligence: 25\nWisdom: 25\nDexterity: 14\nConstitution: 26\n" \
@@ -36,7 +36,7 @@ class Test(TestCase):
                              "Charisma": 30,
                              "Inventory": [],
                              "XP": 33000,
-                             "Class": "Paladin",
+                             "Class": "paladin",
                              "Race": "human",
                              "HP": [35, 10]})
         expected = "Name: Solar\nStrength: 26\nIntelligence: 25\nWisdom: 25\nDexterity: 14\nConstitution: 26\n" \

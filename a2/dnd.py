@@ -371,7 +371,7 @@ def main():
                        "Charisma": 30,
                        "Inventory": ["Angelic Weapons", "Divine Awareness", "Innate Spellcasting"],
                        "XP": 33000,
-                       "Class": "Paladin",
+                       "Class": "paladin",
                        "Race": "human",
                        "HP": [35, 35]}
     combat_round(player_character, enemy_character)

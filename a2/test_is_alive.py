@@ -14,7 +14,7 @@ class Test(TestCase):
                                "Charisma": 30,
                                "Inventory": ["Angelic Weapons", "Divine Awareness", "Innate Spellcasting"],
                                "XP": 33000,
-                               "Class": "Paladin",
+                               "Class": "paladin",
                                "Race": "human",
                                "HP": [35, 35]})
         expected = True
@@ -30,7 +30,7 @@ class Test(TestCase):
                                "Charisma": 30,
                                "Inventory": ["Angelic Weapons", "Divine Awareness", "Innate Spellcasting"],
                                "XP": 33000,
-                               "Class": "Paladin",
+                               "Class": "paladin",
                                "Race": "human",
                                "HP": [35, 0]})
         expected = False
@@ -46,7 +46,7 @@ class Test(TestCase):
                                "Charisma": 30,
                                "Inventory": ["Angelic Weapons", "Divine Awareness", "Innate Spellcasting"],
                                "XP": 33000,
-                               "Class": "Paladin",
+                               "Class": "paladin",
                                "Race": "human",
                                "HP": [35, -23]})
         expected = False
