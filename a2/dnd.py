@@ -12,6 +12,10 @@ def roll_die(number_of_rolls, number_of_sides):
     :postcondition: return an object as defined by the return statement below.
     :return: a positive integer representing the sum of the dice rolls.
 
+    Components of computational thinking:
+    Pattern matching: Pattern matching was demonstrated here with the for loop. The number of dice rolled depends on
+    a parameter, so it makes sense to implement a for loop to do so.
+
     >>> roll_die(1, 1)
     1
     >>> roll_die(15, 1)
@@ -33,6 +37,12 @@ def generate_name(syllables):
     :precondition: provide the function with a valid argument as defined by the PARAM statement above.
     :postcondition: return an object as defined by the return statement below.
     :return: a random string representing a name.
+
+    Components of computational thinking:
+    Pattern matching: A fair name can be constructed using one or more strings of a consonant followed by a vowel. I
+    have implemented this with a for loop.
+    Decomposition: I have implemented generate_syllable which creates a string with a consonant followed by a vowel.
+    This allows me to have very clear code that does one thing.
     """
     name = ""
     for i in range(syllables):
@@ -47,6 +57,13 @@ def generate_syllable():
     :precondition: provide the function with no arguments.
     :postcondition: return an object as defined by the return statement below.
     :return: a string of length two composed of a consonant followed by a vowel.
+
+    Components of computational thinking:
+    Decomposition: I have implemented random selection of a vowel and consonant into different functions,
+    which allows this function to perform one thing: concatenation.
+    Abstraction: By having helper functions generate consonants and vowels, it becomes easier to implement different
+    kind of syllables. If I wanted to create syllables with two vowels followed by a consonant, I could easily change
+    this function to do that.
     """
     return generate_consonant() + generate_vowel()
 
@@ -58,6 +75,9 @@ def generate_vowel():
     :precondition: provide the function with no arguments.
     :postcondition: return an object as defined by the return statement below.
     :return: a string of length one that is a vowel (including "y").
+
+    Components of computational thinking:
+    Decomposition: This function demonstrates decomposition by handling randon generation for another function.
     """
     return random.choice("aeiouy")
 
@@ -69,6 +89,9 @@ def generate_consonant():
     :precondition: provide the function with no arguments.
     :postcondition: return an object as defined by the return statement below.
     :return: a string of length one that is a consonant (including "y").
+
+    Components of computational thinking:
+    Decomposition: This function demonstrates decomposition by handling randon generation for another function.
     """
     return random.choice("bcdfghjklmnpqrstvwxyz")
 
@@ -92,6 +115,12 @@ def create_character(syllables):
     :precondition: provide the function with valid a argument according to the PARAM statement above.
     :postcondition: return an object as defined by the return statement below.
     :return: a dictionary representing a properly formatted Dungeons and Dragons character.
+
+    Components of computational thinking:
+    Decomposition: This is a complex function. Decomposition was demonstrated by the fact that this function will
+    invoke more than five different functions instead of hard-coding all of that here.
+    Algorithms: I have designed my function to execute in a specific order that gives the user more control by
+    initializing character stats before character and race selection.
     """
     if not syllables.isdigit() or int(syllables) <= 0:
         print("You have failed to enter a positive integer.")
@@ -123,6 +152,12 @@ def roll_hit_dice(character_class):
     :precondition: provide the function with a valid argument as defined by the PARAM statement above.
     :postcondition: return an object as defined by the return statement below.
     :return: an integer representing the starting health of that character.
+
+    Components of computational thinking:
+    Decomposition: This function uses the roll_die function to generate integers for classes instead of generating it
+    in this function.
+    Abstraction: This function compiles all classes that have equal hit-dice together, so instead of having twelve
+    if-statements, it has four.
     """
     if character_class == "barbarian":
         return roll_die(1, 12)
@@ -141,6 +176,12 @@ def select_class():
     :precondition: the user eventually selects an integer in the range [1,12].
     :postcondition: return an object as defined by the return statement below.
     :return: a string representing the class of the character in lowercase.
+
+    Components of computational thinking:
+    Automation: This function implements the use of a while loop to handle faulty inputs and request a different input.
+    Pattern matching: Instead of implementing an if statement for each class, this function has an indexable list to
+    select from, improving readability and simplifying code. Instead of hard coding a print message, it becomes
+    simple to print all classes with a for loop.
     """
     classes = ["Fighter", "Rogue", "Monk", "Ranger", "Wizard", "Warlock", "Sorcerer", "Cleric", "Druid", "Bard",
                "Barbarian", "Paladin"]
@@ -166,6 +207,12 @@ def select_race():
     :precondition: the user eventually selects an integer in the range [1,9].
     :postcondition: return an object as defined by the return statement below.
     :return: a string representing the race of the character in lowercase.
+
+    Components of computational thinking:
+    Automation: This function implements the use of a while loop to handle faulty inputs and request a different input.
+    Pattern matching: Instead of implementing an if statement for each race, this function has an indexable list to
+    select from, improving readability and simplifying code. Instead of hard coding a print message, it becomes
+    simple to print all races with a for loop.
     """
 
     races = ["Tiefling", "Dragonborn", "Human", "Half-Elf", "Elf", "Dwarf", "Gnome", "Halfling", "Half-Orc"]
@@ -191,6 +238,10 @@ def print_character(character):
     :param character: a well formatted Dungeons and Dragons character.
     :precondition: provide the function with a valid argument as defined by the PARAM statement above.
     :postcondition: print the provided argument in an easy to read manner.
+
+    Components of computational thinking:
+    Algorithms: This function prints every key and value in direct and clear way, and implements two special cases
+    with if statements to handle keys whose values are inherently harder to read.
     """
     for key in character:
         if key == "Inventory":
@@ -210,6 +261,12 @@ def choose_inventory(character):
     :param character: a well formatted Dungeons and Dragons character.
     :precondition: the user eventually enters -1 as an input.
     :postcondition: adds the items selected to the character's inventory as strings in a list.
+
+    Components of computational thinking:
+    Automation: This function implements the use of a list for items that can be indexed, so changing item names are
+    not too difficult.
+    Abstraction: This function accounts for the use-case where the user already has items by using the extends
+    function instead of setting the inventory variable equal to the shopping basket varialbe.
     """
     shop_message = """    Welcome to the Potion Seller's Store!
     You cannot handle my strongest potions..
@@ -259,6 +316,12 @@ def combat_round(opponent_one, opponent_two):
     :param opponent_two: a well-formed dictionary representing a character, where that character's HP is > 0.
     :precondition: provide the function with arguments according to the PARAM statements above.
     :postcondition: print details about the combat and update the characters' HPs if necessary.
+
+    Components of computational thinking:
+    Algorithms: This function implements an if statement with two nested statements to handle the permutations of
+    which character attacks which in an readable way.
+    Decomposition: This function implements four different helper functions to help it handle combat. Those functions
+    are obvious in what they do and make reading this code very easy.
     """
     initiative = roll_initiative(opponent_one["Name"], opponent_two["Name"])
     if initiative == opponent_one["Name"]:
@@ -284,6 +347,12 @@ def roll_initiative(name_one, name_two):
     :precondition: provide the function with valid arguments according to the PARAM statements above.
     :postcondition: return an object as defined by the return statement below.
     :return: a string that is one of the two parameters, representing the winner.
+
+    Components of computational thinking:
+    Automation: This function implements the use of a while loop to reroll all ties.
+    Data representation: Instead of accepting a character dictionary, this function accepts only strings so that the
+    return demonstrates which character won initiative in a more obvious way. This function only needs the name so it
+    would be less efficient to take in the whole dictionary as an input.
     """
     initiative_one = roll_die(1, 20)
     print(name_one + " has rolled " + str(initiative_one) + " for initiative!")
@@ -310,6 +379,10 @@ def roll_to_hit(attacker, defender):
     :param defender: a well-formed dictionary representing a character.
     :precondition: provide the function with valid arguments according to the PARAM statements above.
     :postcondition: print details about combat and update the defender's current HP if necessary.
+
+    Components of computational thinking:
+    Automation: This function calls damage itself instead of allowing the parent function to do so afterwards because a
+    successful attack should usually result in damage being done. This allows the parent function to be simpler.
     """
     to_hit = roll_die(1, 20)
     print(attacker["Name"] + " has rolled " + str(to_hit) + " to hit against the defender's dexterity of " +
@@ -328,6 +401,10 @@ def roll_for_damage(attacker, defender):
     :param defender: a well-formed dictionary representing a character.
     :precondition: provide the function with valid arguments according to the PARAM statements above.
     :postcondition: update the defender's current HP.
+
+    Components of computational thinking:
+    Automation: This function handles changing HP inside of it instead of returning an integer for damage so that the
+    parent functions do not have to.
     """
     damage = roll_hit_dice(attacker["Class"])
     defender["HP"][1] -= damage
@@ -342,6 +419,11 @@ def is_alive(character):
     :precondition: provide the function with a valid argument according to the PARAM statement above.
     :postcondition: return an object as defined by the return statement below.
     :return: a boolean value representing whether or not the character is alive.
+
+    Components of computational thinking:
+    Data Representation: This function uses the name is_alive to provide the information that this function will
+    return a boolean value. Additionally, a boolean value is returned because that will be the most useful return
+    type for parent functions. (Can be used in an if function without operators)
     """
     if character["HP"][1] <= 0:
         print(character["Name"] + " has died!")
