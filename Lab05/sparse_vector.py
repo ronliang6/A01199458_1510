@@ -1,7 +1,7 @@
 import doctest
 
 
-def sparse_add(vector1: dict, vector2: dict) -> dict:
+def sparse_add(vector1: dict, vector2: dict):
     """
 
     :param vector1:
@@ -32,7 +32,7 @@ def sparse_add(vector1: dict, vector2: dict) -> dict:
     return vector_sum_dict
 
 
-def sparse_dot_product(vector1: dict, vector2: dict) -> int:
+def sparse_dot_product(vector1: dict, vector2: dict):
     """
 
     :param vector1:
@@ -68,7 +68,6 @@ def sparse_vector_to_list(vector: dict) -> list:
 
     >>> sparse_vector_to_list({0:1, 7:2, 9:11, 10:1, 12:1})
     [1, 0, 0, 0, 0, 0, 0, 2, 0, 11, 1, 0, 1]
-
     """
     index = 0
     dict_as_list = []
