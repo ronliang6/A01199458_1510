@@ -2,7 +2,34 @@ import doctest
 
 
 def sparse_add(vector1: dict, vector2: dict) -> dict:
-    pass
+    """
+
+    :param vector1:
+    :param vector2:
+    :return:
+    >>> sparse_add({2:2, 'length': 12, 5:1, 6:12, 9:1}, {2:1, 'length': 12, 7:7, 9:1})
+    {2: 3, 5: 1, 6: 12, 7: 7, 9: 2, 'length': 12}
+    >>> sparse_add({2:2, 'length': 13, 5:1, 6:12, 9:1}, {2:1, 'length': 12, 7:7, 9:1})
+
+    """
+    if vector1['length'] != vector2['length']:
+        return None
+    length = vector1['length']
+    del vector1['length']
+    del vector2['length']
+    vector1_as_list = sparse_vector_to_list(vector1)
+    vector2_as_list = sparse_vector_to_list(vector2)
+    vector_sum_list = []
+    vector_sum_dict = {}
+
+    for i in range(len(vector1_as_list)):
+        vector_sum_list.append(vector1_as_list[i] + vector2_as_list[i])
+    for item in enumerate(vector_sum_list):
+        if item[1] != 0:
+            vector_sum_dict[item[0]] = item[1]
+    vector_sum_dict['length'] = length
+
+    return vector_sum_dict
 
 
 def sparse_dot_product(vector1: dict, vector2: dict) -> int:
