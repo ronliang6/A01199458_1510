@@ -6,7 +6,31 @@ def sparse_add(vector1: dict, vector2: dict) -> dict:
 
 
 def sparse_dot_product(vector1: dict, vector2: dict) -> int:
-    pass
+    """
+
+    :param vector1:
+    :param vector2:
+    :return:
+    >>> sparse_dot_product({2:2, 5:1, 'length': 15, 6:12, 9:1}, {2:1, 'length': 15, 7:7, 9:1})
+    3
+    >>> sparse_dot_product({2:18, 5:4, 'length': 12, 6:12, 9:1}, {2:1, 'length': 12, 7:7, 9:3})
+    21
+    >>> sparse_dot_product({2:18, 'length': 12, 5:4, 6:12, 9:1}, {2:1, 7:7, 'length': 10, 9:3})
+
+    """
+    if vector1['length'] != vector2['length']:
+        return None
+    del vector1['length']
+    del vector2['length']
+    vector1_as_list = sparse_vector_to_list(vector1)
+    vector2_as_list = sparse_vector_to_list(vector2)
+    vector_product_list = []
+    products_sum = 0
+    for i in range(len(vector1_as_list)):
+        vector_product_list.append(vector1_as_list[i] * vector2_as_list[i])
+    for integer in vector_product_list:
+        products_sum += integer
+    return products_sum
 
 
 def sparse_vector_to_list(vector: dict) -> list:
