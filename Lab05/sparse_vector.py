@@ -12,9 +12,9 @@ def sparse_add(vector1: dict, vector2: dict):
     :postcondition: The function will return an object as defined by the return statement below.
     :return: Return None if the sparse vector lengths are not equal, or the sum of the vectors as a dictionary
     representing a sparse vector if they are.
-    >>> sparse_add({'length': 5, 2:7.5, 4:-6}, {4:-5, 'length':5, 0:4.3})
+    >>> sparse_add({'length': 5, 2: 7.5, 4: -6}, {4: -5, 'length': 5, 0: 4.3})
     {0: 4.3, 2: 7.5, 4: -11, 'length': 5}
-    >>> sparse_add({2:2, 'length': 13, 5:1, 6:12, 9:1}, {2:1, 'length': 12, 7:7, 9:1})
+    >>> sparse_add({2: 2, 'length': 13, 5: 1, 6: 12, 9: 1}, {2: 1, 'length': 12, 7: 7, 9: 1})
 
     >>> sparse_add({'length': 5}, {'length':5})
     {'length': 5}
@@ -48,9 +48,9 @@ def sparse_dot_product(vector1: dict, vector2: dict):
     :postcondition: The function will return an object as defined by the return statement below.
     :return: Return None if the sparse vector lengths are not equal, or an integer representing the dot product of
     the two vectors given as arguments if the lengths are equal.
-    >>> sparse_dot_product({'length': 5, 2:7.5, 4:-6}, {4:-5, 'length':5, 0:4.3})
+    >>> sparse_dot_product({'length': 5, 2: 7.5, 4: -6}, {4: -5, 'length': 5, 0: 4.3})
     30.0
-    >>> sparse_dot_product({2:18, 'length': 12, 5:4, 6:12, 9:1}, {2:1, 7:7, 'length': 10, 9:3})
+    >>> sparse_dot_product({2: 18, 'length': 12, 5: 4, 6: 12, 9: 1}, {2: 1, 7: 7, 'length': 10, 9: 3})
 
     >>> sparse_dot_product({'length': 5}, {'length':5})
     0
@@ -77,7 +77,7 @@ def sparse_vector_to_list(vector: dict) -> list:
     :postcondition: Return an object as defined by the return statement below.
     :return: A list of floats representing a sparse vector.
 
-    >>> sparse_vector_to_list({7:2, 0:1.01, 9:11, 'length': 14, 10:1, 12:1.77})
+    >>> sparse_vector_to_list({7: 2, 0: 1.01, 9: 11, 'length': 14, 10: 1, 12: 1.77})
     [1.01, 0, 0, 0, 0, 0, 0, 2, 0, 11, 1, 0, 1.77, 0]
     >>> sparse_vector_to_list({'length': 5})
     [0, 0, 0, 0, 0]
