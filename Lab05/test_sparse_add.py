@@ -11,6 +11,12 @@ class Test(TestCase):
         expected = {'length': 3}
         self.assertEqual(actual, expected)
 
+    @patch('sparse_vector.sparse_vector_to_list', side_effect=[[1, 2, 8], [0, 0, 0]])
+    def test_sparse_add_one_all_zeroes(self, _):
+        actual = sparse_vector.sparse_add({0: 1, 1: 2, 2: 8, 'length': 3}, {'length': 3})
+        expected = {0: 1, 1: 2, 2: 8, 'length': 3}
+        self.assertEqual(actual, expected)
+
     @patch('sparse_vector.sparse_vector_to_list', side_effect=[[], []])
     def test_sparse_add_length_zero(self, _):
         actual = sparse_vector.sparse_add({'length': 0}, {'length': 0})
@@ -27,6 +33,12 @@ class Test(TestCase):
     def test_sparse_add_length_one(self, _):
         actual = sparse_vector.sparse_add({'length': 1, 0: 2}, {0: 3, 'length': 1})
         expected = {0: 5, 'length': 1}
+        self.assertEqual(actual, expected)
+
+    @patch('sparse_vector.sparse_vector_to_list', side_effect=[[-1, -2], [1, 2]])
+    def test_sparse_add_complimentary_elements(self, _):
+        actual = sparse_vector.sparse_add({'length': 2, 0: -1, 1: -2}, {0: 1, 'length': 2, 1: 2})
+        expected = {'length': 2}
         self.assertEqual(actual, expected)
 
     def test_sparse_add_different_lengths(self):
