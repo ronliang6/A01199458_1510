@@ -56,7 +56,21 @@ def is_win(character: list) -> bool:
         return False
 
 
-
+def game():
+    board = create_board()
+    character = create_character()
+    reached_goal = False
+    while not reached_goal:
+        display_position(board, character)
+        direction = input("Please enter a key in 'wasd' to move that direction. You cannot move pass the edge of the "
+                          "map.")
+        if validate_move(board, character, direction):
+            move_character(direction, character)
+            reached_goal = is_win(character)
+        else:
+            print("Please select a valid input. Enter a wasd key and do not move past the walls!")
+    print("Wow you won the game! Are you proud of yourself? You beat a maze with no walls. Well done. You might just "
+          "be the smartest person in the world.")
 
 
 def main():
