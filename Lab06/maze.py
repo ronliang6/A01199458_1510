@@ -49,6 +49,13 @@ def move_character(direction: str, character: list):
         character[0] += 1
 
 
+def is_win(character: list) -> bool:
+    if character[0] == 4 and character[1] == 4:
+        return True
+    else:
+        return False
+
+
 
 
 
