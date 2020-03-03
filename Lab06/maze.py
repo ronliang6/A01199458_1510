@@ -6,6 +6,10 @@ def create_board() -> list:
     return list(itertools.product([i for i in range(5)], repeat=2))
 
 
+def create_character() -> list:
+    return [0, 0]
+
+
 
 
 
