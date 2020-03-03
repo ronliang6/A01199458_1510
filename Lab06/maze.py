@@ -21,6 +21,24 @@ def display_position(game_board: list, character: list):
             print("")
 
 
+def validate_move(board: list, character: list, direction: str) -> bool:
+    max_x_y_coordinates = board[-1]
+    valid_options = []
+    if character[1] < max_x_y_coordinates[0]:
+        valid_options.append("d")
+    if character[1] > 0:
+        valid_options.append("a")
+    if character[0] < max_x_y_coordinates[1]:
+        valid_options.append("s")
+    if character[0] > 0:
+        valid_options.append("w")
+    if direction in valid_options:
+        return True
+    else:
+        return False
+
+
+
 
 
 def main():
