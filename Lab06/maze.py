@@ -38,6 +38,17 @@ def validate_move(board: list, character: list, direction: str) -> bool:
         return False
 
 
+def move_character(direction: str, character: list):
+    if direction == "d":
+        character[1] += 1
+    if direction == "a":
+        character[1] -= 1
+    if direction == "w":
+        character[0] -= 1
+    if direction == "s":
+        character[0] += 1
+
+
 
 
 
