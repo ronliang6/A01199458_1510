@@ -141,6 +141,7 @@ def game():
             reached_goal = is_win(character)
         else:
             print("Please select a valid input. Enter a wasd key and do not move past the walls!")
+    display_position(board, character)
     print("Wow you won the game! Are you proud of yourself? You beat a maze with no walls. Well done. You might just "
           "be the smartest person in the world.")
 
