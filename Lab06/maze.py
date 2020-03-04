@@ -127,7 +127,7 @@ def game():
     The game is played on a grid of 5 by 5 positions. The user can move to adjacent but not diagonally. The user
     starts at position 0, 0. The character can be moved by inputting a wasd key.
     :precondition: the function is provided with no arguments.
-    :postcondition: the user plays a maze game and will probably eventually win.
+    :postcondition: the user plays a maze game and eventually wins.
     """
     board = create_board()
     character = create_character()
