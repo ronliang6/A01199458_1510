@@ -2,7 +2,7 @@ import doctest
 import itertools
 
 
-def create_board() -> list:
+def create_board(size) -> list:
     """
     Create a two-dimensional game board with a 5 by 5 grid represented by a list of tuples.
 
@@ -10,7 +10,7 @@ def create_board() -> list:
     :postcondition: return an object as defined by the return statement below.
     :return: a list of tuples representing a game board.
     """
-    return list(itertools.product([i for i in range(5)], repeat=2))
+    return list(itertools.product([i for i in range(size)], repeat=2))
 
 
 def create_character() -> list:
@@ -39,7 +39,7 @@ def display_position(game_board: list, character: list):
             print('C', end=" ")
         else:
             print("*", end=" ")
-        if position[1] == 4:
+        if position[1] == game_board[-1][1]:
             print("")
 
 
@@ -98,23 +98,24 @@ def move_character(direction: str, character: list):
         character[0] += 1
 
 
-def is_win(character: list) -> bool:
+def is_win(character: list, board: list) -> bool:
     """
     Determine if a character is at the end of a maze based on that character's position.
 
+    :param board: a list of tuples representing a game board.
     :param character: a list of two integers representing a character position.
     :precondition: provide the function with a valid argument according to the PARAM statement above.
     :postcondition: return an object as defined by the return statement below.
     :return: a bool representing whether or not the character is at the end of a maze.
 
-    >>> is_win([1, 4])
-    False
-    >>> is_win([4, 4])
+    >>> is_win([1, 1], [(0, 0), (0, 1), (1, 0), (1, 1)])
     True
-    >>> is_win([0, 0])
+    >>> is_win([1, 0], [(0, 0), (0, 1), (1, 0), (1, 1)])
+    False
+    >>> is_win([0, 0], [(0, 0), (0, 1), (1, 0), (1, 1)])
     False
     """
-    if character[0] == 4 and character[1] == 4:
+    if character[0] == board[-1][0] and character[1] == board[-1][1]:
         return True
     else:
         return False
@@ -124,12 +125,12 @@ def game():
     """
     Simulate a simple maze game for the user.
 
-    The game is played on a grid of 5 by 5 positions. The user can move to adjacent but not diagonally. The user
+    The game is played on a grid. The user can move to adjacent but not diagonally. The user
     starts at position 0, 0. The character can be moved by inputting a wasd key.
     :precondition: the function is provided with no arguments.
     :postcondition: the user plays a maze game and eventually wins.
     """
-    board = create_board()
+    board = create_board(8)
     character = create_character()
     reached_goal = False
     while not reached_goal:
@@ -138,7 +139,7 @@ def game():
                           "map.")
         if validate_move(board, character, direction):
             move_character(direction, character)
-            reached_goal = is_win(character)
+            reached_goal = is_win(character, board)
         else:
             print("Please select a valid input. Enter a wasd key and do not move past the walls!")
     display_position(board, character)
