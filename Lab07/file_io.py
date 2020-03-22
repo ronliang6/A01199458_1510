@@ -1,5 +1,3 @@
-
-
 def find_common_words():
     file_name = input("What is the name of the file you wish to operate on?")
     try:
@@ -17,10 +15,7 @@ def find_common_words():
                     word_tally[word] += 1
                 else:
                     word_tally[word] = 1
-        words_printed = 0
-        for word, occurrences in sorted(word_tally.items(), key=sort_by_value, reverse=True):
-            if words_printed == 10:
-                break
+        for word, occurrences in sorted(word_tally.items(), key=sort_by_value, reverse=True)[:10]:
             print(word, "-", occurrences)
 
 
