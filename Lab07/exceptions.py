@@ -10,7 +10,7 @@ def heron(num: int):
     :postcondition: return an object according to the return statement below. If num is 0 or negative,
     print a helpful warning message.
     :raise ZeroDivisionError: if PARAM num is 0 or negative.
-    :return: a float that represents the square root of num with four or less decimal places or -1 if num is 0 or
+    :return: a float that represents the square root of num with two or less decimal places or -1 if num is 0 or
     negative.
 
     >>> heron(0)
@@ -23,7 +23,7 @@ def heron(num: int):
     >>> heron(0.25)
     0.5
     >>> heron(1000)
-    31.6228
+    31.62
     >>> heron(10000)
     100.0
     """
@@ -36,7 +36,7 @@ def heron(num: int):
             while abs(guess * guess - num) > tolerance:  # continue finding a more accurate guess if the guess is not
                 # close enough to the true root, as defined by the tolerance
                 guess = (guess + num / guess) / 2  # this formula is a step towards finding the square root of a number
-            return float(round(guess, 4))
+            return float(round(guess, 2))
     except ZeroDivisionError:
         print("You have entered a negative integer, that is not valid.")
         return -1

@@ -30,6 +30,6 @@ class Test(TestCase):
 
     def test_heron_root_is_float(self):
         actual = exceptions.heron(1000)
-        expected = 31.6228
+        expected = 31.62
         self.assertEqual(actual, expected)
 

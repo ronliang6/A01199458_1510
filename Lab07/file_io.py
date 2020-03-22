@@ -20,7 +20,7 @@ def find_common_words():
 
 
 def string_cleaner(string):
-    symbols_to_remove = [",", ".", "(", ")", '"', "!", "&", "-", "~", "/"]
+    symbols_to_remove = [",", ".", "(", ")", '"', "!", "&", "-", "~", "/", "'"]
     for symbol in symbols_to_remove:
         string = string.replace(symbol, " ")
     return string
@@ -28,3 +28,11 @@ def string_cleaner(string):
 
 def sort_by_value(item):
     return item[1]
+
+
+def main():
+    find_common_words()
+
+
+if __name__ == "__main__":
+    main()
