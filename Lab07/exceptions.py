@@ -42,7 +42,7 @@ def heron(num: int):
         return -1
 
 
-def find_an_even(input_list):
+def find_an_even(input_list: list):
     """
     Return the first even number in input_list.
 

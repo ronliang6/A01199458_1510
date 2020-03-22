@@ -35,7 +35,7 @@ def find_common_words():
             print(word, "-", occurrences)
 
 
-def string_cleaner(string):
+def string_cleaner(string: str) -> str:
     """
     Replace certain symbols in a string with white spaces.
 
