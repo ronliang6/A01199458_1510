@@ -42,6 +42,30 @@ def heron(num: int):
         return -1
 
 
+def find_an_even(input_list):
+    """
+    Return the first even number in input_list.
+
+    :param input_list: a list of integers.
+    :precondition: input_list must be a list of integer.
+    :postcondition: return the first even number in input_list.
+    :raise ValueError: if input_list does not contain an even number.
+    :return: first even number in input_list.
+
+    >>> find_an_even([0])
+    0
+    >>> find_an_even([0, 2])
+    0
+    >>> find_an_even([1, 9, 0])
+    0
+    """
+
+    for integer in input_list:
+        if integer % 2 == 0:
+            return integer
+    raise ValueError
+
+
 def main():
     doctest.testmod()
 
