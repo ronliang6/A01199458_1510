@@ -8,15 +8,20 @@ class Country:
         Instantiate a country object with a name, population, and area.
 
         :param name: a string.
-        :param population: a positive integer.
-        :param area: a positive integer.
+        :param population: an integer.
+        :param area: an integer.
         :precondition: provide the function with valid arguments according to the PARAM statements above.
         :postcondition: instantiate a Country object with instance variables initialized according to the arguments
         provided.
+        :raise ValueError: if the population or area is less than
         """
+
+        if population <= 0 or area <= 0:
+            raise ValueError("The population and area must be an integer greater than zero.")
+        else:
+            self.population = population
+            self.area = area
         self.name = name
-        self.population = population
-        self.area = area
 
     def is_larger(self, country) -> bool:
         """

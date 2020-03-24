@@ -67,3 +67,7 @@ class TestCountry(TestCase):
         print(repr([self.test_country]))
         expected = "[Country(\"America\", 5000, 5000)]\n"
         self.assertEqual(output.getvalue(), expected)
+
+    def test_population_area_value_error(self):
+        with self.assertRaises(ValueError):
+            country.Country("Canada", 0, -1)
