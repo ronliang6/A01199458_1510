@@ -58,14 +58,12 @@ class TestCountry(TestCase):
 
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_repr_by_call_object(self, output):
-        actual = self.test_country
-        expected = "Country(\"America\", 5000, 5000)"
-        self.assertEqual(actual, expected)
-    # This puts out a failed test but the actual and expected are in fact identical..
+        print(repr(self.test_country))
+        expected = "Country(\"America\", 5000, 5000)\n"
+        self.assertEqual(output.getvalue(), expected)
 
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_repr_by_call_collection_with_object(self, output):
-        actual = [self.test_country]
-        expected = "[Country(\"America\", 5000, 5000)]"
-        self.assertEqual(actual, expected)
-    # This puts out a failed test as well.
+        print(repr([self.test_country]))
+        expected = "[Country(\"America\", 5000, 5000)]\n"
+        self.assertEqual(output.getvalue(), expected)

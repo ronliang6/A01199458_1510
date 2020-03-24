@@ -64,6 +64,19 @@ def string_cleaner(string: str) -> str:
 
 
 def sort_by_value(item):
+    """
+    Return the value of a key value pair.
+
+    This function is designed to be used as a key for a sort() function to order by the value of a key-value pair.
+    The value should be an integer.
+
+    :param item: a key-value pair.
+    :precondition: provide the function with an argument as defined by the PARAM statement above.
+    :postcondition: return an object as defined by the return statement below.
+    :return: the value of the key-value pair.
+
+    >>> sort_by
+    """
     return item[1]
 
 
