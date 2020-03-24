@@ -31,7 +31,7 @@ def find_common_words():
                     word_tally[word] += 1
                 else:
                     word_tally[word] = 1
-        for word, occurrences in sorted(word_tally.items(), key=sort_by_value, reverse=True)[:10]:
+        for word, occurrences in sorted(word_tally.items(), key=get_second_object, reverse=True)[:10]:
             print(word, "-", occurrences)
 
 
@@ -63,21 +63,8 @@ def string_cleaner(string: str) -> str:
     return string
 
 
-def sort_by_value(item):
-    """
-    Return the value of a key value pair.
-
-    This function is designed to be used as a key for a sort() function to order by the value of a key-value pair.
-    The value should be an integer.
-
-    :param item: a key-value pair.
-    :precondition: provide the function with an argument as defined by the PARAM statement above.
-    :postcondition: return an object as defined by the return statement below.
-    :return: the value of the key-value pair.
-
-    >>> sort_by
-    """
-    return item[1]
+def get_second_object(iterable):
+    return iterable[1]
 
 
 def main():
