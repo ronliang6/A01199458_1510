@@ -20,10 +20,12 @@ class Tree:
             self.__species = species
         else:
             raise ValueError("species requires at least one non-whitespace character.")
+
         if age_years >= 0:
             self.__age_years = age_years
         else:
             raise ValueError("age_years must be at least 0.")
+
         if circumference_cm >= 0:
             self.__circumference_cm = circumference_cm
         else:
@@ -102,14 +104,14 @@ class Tree:
         :raise ValueError: if new_age_years is less than 0.
 
         >>> tree_one = Tree("Douglas-fir", 20, 31.23)
-        >>> tree_one.set_age_years(54)
+        >>> tree_one.set_age_years(33)
         >>> tree_one.get_age_years()
-        54
+        33
         """
         if new_age_years >= 0:
             self.__age_years = new_age_years
         else:
-            raise ValueError("age_years must be at least 0.")
+            raise ValueError("new_age_years must be at least 0.")
 
     def set_circumference_cm(self, new_circumference_cm: float):
         """
@@ -141,7 +143,36 @@ class Tree:
         :precondition: provide the function with no arguments.
         :postcondition: return an object as defined by the return statement below.
         :return: a string describing a tree.
+
+        >>> tree_one = Tree("Douglas-fir", 20, 31.2321)
+        >>> print(tree_one)
+        This Douglas-fir is 20 years old and has a circumference of 31.23 cm.
+        >>> tree_one.__str__()
+        'This Douglas-fir is 20 years old and has a circumference of 31.23 cm.'
         """
+        return "This {0} is {1} years old and has a circumference of {2:.2f} cm.".format(self.get_species(),
+                                                                                         self.get_age_years(),
+                                                                                         self.get_circumference_cm())
+
+    def __repr__(self) -> str:
+        """
+        Return a string that represents the tree object and it's instance variables.
+
+        This function also modifies the way tree objects are displayed in the shell or when a called as part of a
+        collection. By default, it represents the object type and it's address in memory. Now it displays useful
+        information about the object.
+
+        :precondition: provide the function with no arguments.
+        :postcondition: return an object as defined by the return statement below.
+        :return: a string representing a country object.
+
+        >>> america = Country("America", 51522, 222222)
+        >>> america
+        Country("America", 51522, 222222)
+        >>> [america]
+        [Country("America", 51522, 222222)]
+        """
+        return "Country(\"" + self.name + "\", " + str(self.population) + ", " + str(self.area) + ")"
 
 
 def main():
