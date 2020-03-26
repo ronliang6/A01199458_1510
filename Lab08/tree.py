@@ -118,13 +118,14 @@ class Tree:
         Return a string that describes a tree.
 
         This function also changes the way the print() function works. When a Tree object is passed to a print()
-        function, that function will instead print the string returned by this function.
+        function, that function will instead print the string returned by this function. The circumference is rounded to
+        two decimal places.
 
         :precondition: provide the function with no arguments.
         :postcondition: return an object as defined by the return statement below.
         :return: a string describing a tree.
 
-        >>> tree_one = Tree("Douglas-fir", 20, 31.2321)
+        >>> tree_one = Tree("Douglas-fir", 20, 31.2261)
         >>> print(tree_one)
         This Douglas-fir is 20 years old and has a circumference of 31.23 cm.
         >>> tree_one.__str__()
@@ -146,13 +147,13 @@ class Tree:
         :postcondition: return an object as defined by the return statement below.
         :return: a string representing a tree object.
 
-        >>> tree_one = Tree("Douglas-fir", 30, 215.21)
+        >>> tree_one = Tree("Douglas-fir", 30, 215.2122)
         >>> tree_one
-        Tree("Douglas-fir", 30, 215.21)
+        Tree("Douglas-fir", 30, 215.2122)
         >>> [tree_one]
-        [Tree("Douglas-fir", 30, 215.21)]
+        [Tree("Douglas-fir", 30, 215.2122)]
         """
-        return 'Tree("{0}", {1}, {2:.2f})'.format(self.get_species(), self.get_age_years(), self.get_circumference_cm())
+        return 'Tree("{0}", {1}, {2})'.format(self.get_species(), self.get_age_years(), self.get_circumference_cm())
 
 
 def main():
