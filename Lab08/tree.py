@@ -144,15 +144,15 @@ class Tree:
 
         :precondition: provide the function with no arguments.
         :postcondition: return an object as defined by the return statement below.
-        :return: a string representing a country object.
+        :return: a string representing a tree object.
 
-        >>> america = Country("America", 51522, 222222)
-        >>> america
-        Country("America", 51522, 222222)
-        >>> [america]
-        [Country("America", 51522, 222222)]
+        >>> tree_one = Tree("Douglas-fir", 30, 215.21)
+        >>> tree_one
+        Tree("Douglas-fir", 30, 215.21)
+        >>> [tree_one]
+        [Tree("Douglas-fir", 30, 215.21)]
         """
-        return "Country(\"" + self.name + "\", " + str(self.population) + ", " + str(self.area) + ")"
+        return 'Tree("{0}", {1}, {2:.2f})'.format(self.get_species(), self.get_age_years(), self.get_circumference_cm())
 
 
 def main():
