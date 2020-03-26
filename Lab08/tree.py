@@ -73,26 +73,6 @@ class Tree:
         """
         return self.__circumference_cm
 
-    def set_species(self, new_species: str):
-        """
-        Set the species instance variable of a tree object to new_species.
-
-        :param new_species: a string.
-        :precondition: provide the function with an argument as defined by the PARAM statement above.
-        :postcondition: set the species instance variable of the tree object to new_species or raise an error as
-        explained below in the raise error statement.
-        :raise ValueError: if new_species does not contain at least one non-whitespace character.
-
-        >>> tree_one = Tree("Douglas-fir", 20, 31.23)
-        >>> tree_one.set_species("Western Red Cedar")
-        >>> tree_one.get_species()
-        'Western Red Cedar'
-        """
-        if new_species.replace(" ", ""):
-            self.__species = new_species
-        else:
-            raise ValueError("species requires at least one non-whitespace character.")
-
     def set_age_years(self, new_age_years: int):
         """
         Set the age_years instance variable of a tree object to new_age_years.
