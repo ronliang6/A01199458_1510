@@ -1,200 +1,200 @@
-'factorial_iterative' took 0.0000007000 seconds
-'factorial_recursive' took 0.0000011000 seconds
-'factorial_iterative' took 0.0000013000 seconds
-'factorial_recursive' took 0.0000017000 seconds
-'factorial_iterative' took 0.0000011000 seconds
-'factorial_recursive' took 0.0000014000 seconds
-'factorial_iterative' took 0.0000011000 seconds
-'factorial_recursive' took 0.0000016000 seconds
-'factorial_iterative' took 0.0000013000 seconds
-'factorial_recursive' took 0.0000020000 seconds
-'factorial_iterative' took 0.0000016000 seconds
-'factorial_recursive' took 0.0000021000 seconds
-'factorial_iterative' took 0.0000023000 seconds
-'factorial_recursive' took 0.0000022000 seconds
-'factorial_iterative' took 0.0000017000 seconds
-'factorial_recursive' took 0.0000072000 seconds
-'factorial_iterative' took 0.0000026000 seconds
-'factorial_recursive' took 0.0000025000 seconds
-'factorial_iterative' took 0.0000019000 seconds
-'factorial_recursive' took 0.0000025000 seconds
-'factorial_iterative' took 0.0000041000 seconds
-'factorial_recursive' took 0.0000053000 seconds
-'factorial_iterative' took 0.0000047000 seconds
-'factorial_recursive' took 0.0000161000 seconds
-'factorial_iterative' took 0.0000169000 seconds
-'factorial_recursive' took 0.0000066000 seconds
-'factorial_iterative' took 0.0000047000 seconds
-'factorial_recursive' took 0.0000064000 seconds
-'factorial_iterative' took 0.0000069000 seconds
-'factorial_recursive' took 0.0000037000 seconds
-'factorial_iterative' took 0.0000027000 seconds
-'factorial_recursive' took 0.0000038000 seconds
-'factorial_iterative' took 0.0000048000 seconds
-'factorial_recursive' took 0.0000038000 seconds
-'factorial_iterative' took 0.0000027000 seconds
-'factorial_recursive' took 0.0000037000 seconds
-'factorial_iterative' took 0.0000028000 seconds
-'factorial_recursive' took 0.0000036000 seconds
-'factorial_iterative' took 0.0000057000 seconds
-'factorial_recursive' took 0.0000092000 seconds
-'factorial_iterative' took 0.0000060000 seconds
-'factorial_recursive' took 0.0000048000 seconds
-'factorial_iterative' took 0.0000035000 seconds
-'factorial_recursive' took 0.0000049000 seconds
-'factorial_iterative' took 0.0000062000 seconds
-'factorial_recursive' took 0.0000120000 seconds
-'factorial_iterative' took 0.0000038000 seconds
-'factorial_recursive' took 0.0000054000 seconds
-'factorial_iterative' took 0.0000036000 seconds
-'factorial_recursive' took 0.0000105000 seconds
-'factorial_iterative' took 0.0000069000 seconds
-'factorial_recursive' took 0.0000089000 seconds
-'factorial_iterative' took 0.0000076000 seconds
-'factorial_recursive' took 0.0000123000 seconds
-'factorial_iterative' took 0.0000092000 seconds
-'factorial_recursive' took 0.0000124000 seconds
-'factorial_iterative' took 0.0000097000 seconds
-'factorial_recursive' took 0.0000165000 seconds
-'factorial_iterative' took 0.0000105000 seconds
-'factorial_recursive' took 0.0000141000 seconds
-'factorial_iterative' took 0.0000114000 seconds
-'factorial_recursive' took 0.0000146000 seconds
-'factorial_iterative' took 0.0000119000 seconds
-'factorial_recursive' took 0.0000096000 seconds
-'factorial_iterative' took 0.0000102000 seconds
-'factorial_recursive' took 0.0000127000 seconds
-'factorial_iterative' took 0.0000091000 seconds
-'factorial_recursive' took 0.0000097000 seconds
-'factorial_iterative' took 0.0000091000 seconds
-'factorial_recursive' took 0.0000098000 seconds
-'factorial_iterative' took 0.0000093000 seconds
-'factorial_recursive' took 0.0000179000 seconds
-'factorial_iterative' took 0.0000109000 seconds
-'factorial_recursive' took 0.0000185000 seconds
-'factorial_iterative' took 0.0000139000 seconds
-'factorial_recursive' took 0.0000304000 seconds
-'factorial_iterative' took 0.0000184000 seconds
-'factorial_recursive' took 0.0000182000 seconds
-'factorial_iterative' took 0.0000113000 seconds
-'factorial_recursive' took 0.0000185000 seconds
-'factorial_iterative' took 0.0000140000 seconds
-'factorial_recursive' took 0.0000191000 seconds
-'factorial_iterative' took 0.0000097000 seconds
-'factorial_recursive' took 0.0000193000 seconds
-'factorial_iterative' took 0.0000152000 seconds
-'factorial_recursive' took 0.0000199000 seconds
-'factorial_iterative' took 0.0000161000 seconds
-'factorial_recursive' took 0.0000145000 seconds
-'factorial_iterative' took 0.0000183000 seconds
-'factorial_recursive' took 0.0000417000 seconds
-'factorial_iterative' took 0.0000123000 seconds
-'factorial_recursive' took 0.0000092000 seconds
-'factorial_iterative' took 0.0000068000 seconds
-'factorial_recursive' took 0.0000086000 seconds
-'factorial_iterative' took 0.0000174000 seconds
-'factorial_recursive' took 0.0000214000 seconds
-'factorial_iterative' took 0.0000129000 seconds
-'factorial_recursive' took 0.0000136000 seconds
-'factorial_iterative' took 0.0000131000 seconds
-'factorial_recursive' took 0.0000205000 seconds
-'factorial_iterative' took 0.0000134000 seconds
-'factorial_recursive' took 0.0000094000 seconds
-'factorial_iterative' took 0.0000073000 seconds
-'factorial_recursive' took 0.0000143000 seconds
-'factorial_iterative' took 0.0000138000 seconds
-'factorial_recursive' took 0.0000169000 seconds
-'factorial_iterative' took 0.0000184000 seconds
-'factorial_recursive' took 0.0000227000 seconds
-'factorial_iterative' took 0.0000144000 seconds
-'factorial_recursive' took 0.0000184000 seconds
-'factorial_iterative' took 0.0000134000 seconds
-'factorial_recursive' took 0.0000194000 seconds
-'factorial_iterative' took 0.0000178000 seconds
-'factorial_recursive' took 0.0000208000 seconds
-'factorial_iterative' took 0.0000417000 seconds
-'factorial_recursive' took 0.0000181000 seconds
-'factorial_iterative' took 0.0000186000 seconds
-'factorial_recursive' took 0.0000389000 seconds
-'factorial_iterative' took 0.0000786000 seconds
-'factorial_recursive' took 0.0000611000 seconds
-'factorial_iterative' took 0.0000308000 seconds
-'factorial_recursive' took 0.0000541000 seconds
-'factorial_iterative' took 0.0000216000 seconds
-'factorial_recursive' took 0.0000270000 seconds
-'factorial_iterative' took 0.0000233000 seconds
-'factorial_recursive' took 0.0000163000 seconds
-'factorial_iterative' took 0.0000209000 seconds
-'factorial_recursive' took 0.0000310000 seconds
-'factorial_iterative' took 0.0000229000 seconds
-'factorial_recursive' took 0.0000208000 seconds
-'factorial_iterative' took 0.0000227000 seconds
-'factorial_recursive' took 0.0000237000 seconds
-'factorial_iterative' took 0.0000209000 seconds
-'factorial_recursive' took 0.0000327000 seconds
-'factorial_iterative' took 0.0000217000 seconds
-'factorial_recursive' took 0.0000316000 seconds
-'factorial_iterative' took 0.0000205000 seconds
-'factorial_recursive' took 0.0000234000 seconds
-'factorial_iterative' took 0.0000149000 seconds
-'factorial_recursive' took 0.0000180000 seconds
-'factorial_iterative' took 0.0000144000 seconds
-'factorial_recursive' took 0.0000212000 seconds
-'factorial_iterative' took 0.0000147000 seconds
-'factorial_recursive' took 0.0000231000 seconds
-'factorial_iterative' took 0.0000168000 seconds
-'factorial_recursive' took 0.0000188000 seconds
-'factorial_iterative' took 0.0000158000 seconds
-'factorial_recursive' took 0.0000232000 seconds
-'factorial_iterative' took 0.0000159000 seconds
-'factorial_recursive' took 0.0000196000 seconds
-'factorial_iterative' took 0.0000284000 seconds
-'factorial_recursive' took 0.0000427000 seconds
-'factorial_iterative' took 0.0000320000 seconds
-'factorial_recursive' took 0.0000656000 seconds
-'factorial_iterative' took 0.0000563000 seconds
-'factorial_recursive' took 0.0000291000 seconds
-'factorial_iterative' took 0.0000204000 seconds
-'factorial_recursive' took 0.0000343000 seconds
-'factorial_iterative' took 0.0000277000 seconds
-'factorial_recursive' took 0.0000259000 seconds
-'factorial_iterative' took 0.0000268000 seconds
-'factorial_recursive' took 0.0000224000 seconds
-'factorial_iterative' took 0.0000209000 seconds
-'factorial_recursive' took 0.0000259000 seconds
-'factorial_iterative' took 0.0000169000 seconds
-'factorial_recursive' took 0.0000244000 seconds
-'factorial_iterative' took 0.0000246000 seconds
-'factorial_recursive' took 0.0000311000 seconds
-'factorial_iterative' took 0.0000582000 seconds
-'factorial_recursive' took 0.0000391000 seconds
-'factorial_iterative' took 0.0000206000 seconds
-'factorial_recursive' took 0.0000264000 seconds
-'factorial_iterative' took 0.0000406000 seconds
-'factorial_recursive' took 0.0000352000 seconds
-'factorial_iterative' took 0.0000313000 seconds
-'factorial_recursive' took 0.0000343000 seconds
-'factorial_iterative' took 0.0000308000 seconds
-'factorial_recursive' took 0.0000359000 seconds
-'factorial_iterative' took 0.0000316000 seconds
-'factorial_recursive' took 0.0000338000 seconds
-'factorial_iterative' took 0.0000979000 seconds
-'factorial_recursive' took 0.0000337000 seconds
-'factorial_iterative' took 0.0000331000 seconds
-'factorial_recursive' took 0.0000476000 seconds
-'factorial_iterative' took 0.0000223000 seconds
-'factorial_recursive' took 0.0000775000 seconds
-'factorial_iterative' took 0.0000290000 seconds
-'factorial_recursive' took 0.0000442000 seconds
-'factorial_iterative' took 0.0000196000 seconds
-'factorial_recursive' took 0.0000672000 seconds
-'factorial_iterative' took 0.0000200000 seconds
-'factorial_recursive' took 0.0000392000 seconds
-'factorial_iterative' took 0.0000321000 seconds
-'factorial_recursive' took 0.0000309000 seconds
-'factorial_iterative' took 0.0000286000 seconds
-'factorial_recursive' took 0.0000387000 seconds
-'factorial_iterative' took 0.0000272000 seconds
-'factorial_recursive' took 0.0000357000 seconds
-'factorial_iterative' took 0.0000265000 seconds
-'factorial_recursive' took 0.0000296000 seconds
+'factorial_iterative' with (1,) as the argument(s) took 0.0000007000 seconds
+'factorial_recursive' with (1,) as the argument(s) took 0.0000018000 seconds
+'factorial_iterative' with (2,) as the argument(s) took 0.0000036000 seconds
+'factorial_recursive' with (2,) as the argument(s) took 0.0000015000 seconds
+'factorial_iterative' with (3,) as the argument(s) took 0.0000013000 seconds
+'factorial_recursive' with (3,) as the argument(s) took 0.0000022000 seconds
+'factorial_iterative' with (4,) as the argument(s) took 0.0000019000 seconds
+'factorial_recursive' with (4,) as the argument(s) took 0.0000028000 seconds
+'factorial_iterative' with (5,) as the argument(s) took 0.0000022000 seconds
+'factorial_recursive' with (5,) as the argument(s) took 0.0000025000 seconds
+'factorial_iterative' with (6,) as the argument(s) took 0.0000015000 seconds
+'factorial_recursive' with (6,) as the argument(s) took 0.0000032000 seconds
+'factorial_iterative' with (7,) as the argument(s) took 0.0000027000 seconds
+'factorial_recursive' with (7,) as the argument(s) took 0.0000029000 seconds
+'factorial_iterative' with (8,) as the argument(s) took 0.0000025000 seconds
+'factorial_recursive' with (8,) as the argument(s) took 0.0000029000 seconds
+'factorial_iterative' with (9,) as the argument(s) took 0.0000027000 seconds
+'factorial_recursive' with (9,) as the argument(s) took 0.0000033000 seconds
+'factorial_iterative' with (10,) as the argument(s) took 0.0000019000 seconds
+'factorial_recursive' with (10,) as the argument(s) took 0.0000033000 seconds
+'factorial_iterative' with (11,) as the argument(s) took 0.0000030000 seconds
+'factorial_recursive' with (11,) as the argument(s) took 0.0000035000 seconds
+'factorial_iterative' with (12,) as the argument(s) took 0.0000033000 seconds
+'factorial_recursive' with (12,) as the argument(s) took 0.0000026000 seconds
+'factorial_iterative' with (13,) as the argument(s) took 0.0000023000 seconds
+'factorial_recursive' with (13,) as the argument(s) took 0.0000040000 seconds
+'factorial_iterative' with (14,) as the argument(s) took 0.0000062000 seconds
+'factorial_recursive' with (14,) as the argument(s) took 0.0000046000 seconds
+'factorial_iterative' with (15,) as the argument(s) took 0.0000073000 seconds
+'factorial_recursive' with (15,) as the argument(s) took 0.0000051000 seconds
+'factorial_iterative' with (16,) as the argument(s) took 0.0000045000 seconds
+'factorial_recursive' with (16,) as the argument(s) took 0.0000050000 seconds
+'factorial_iterative' with (17,) as the argument(s) took 0.0000047000 seconds
+'factorial_recursive' with (17,) as the argument(s) took 0.0000085000 seconds
+'factorial_iterative' with (18,) as the argument(s) took 0.0000033000 seconds
+'factorial_recursive' with (18,) as the argument(s) took 0.0000038000 seconds
+'factorial_iterative' with (19,) as the argument(s) took 0.0000057000 seconds
+'factorial_recursive' with (19,) as the argument(s) took 0.0000056000 seconds
+'factorial_iterative' with (20,) as the argument(s) took 0.0000057000 seconds
+'factorial_recursive' with (20,) as the argument(s) took 0.0000040000 seconds
+'factorial_iterative' with (21,) as the argument(s) took 0.0000083000 seconds
+'factorial_recursive' with (21,) as the argument(s) took 0.0000047000 seconds
+'factorial_iterative' with (22,) as the argument(s) took 0.0000035000 seconds
+'factorial_recursive' with (22,) as the argument(s) took 0.0000045000 seconds
+'factorial_iterative' with (23,) as the argument(s) took 0.0000037000 seconds
+'factorial_recursive' with (23,) as the argument(s) took 0.0000047000 seconds
+'factorial_iterative' with (24,) as the argument(s) took 0.0000036000 seconds
+'factorial_recursive' with (24,) as the argument(s) took 0.0000049000 seconds
+'factorial_iterative' with (25,) as the argument(s) took 0.0000121000 seconds
+'factorial_recursive' with (25,) as the argument(s) took 0.0000052000 seconds
+'factorial_iterative' with (26,) as the argument(s) took 0.0000041000 seconds
+'factorial_recursive' with (26,) as the argument(s) took 0.0000145000 seconds
+'factorial_iterative' with (27,) as the argument(s) took 0.0000041000 seconds
+'factorial_recursive' with (27,) as the argument(s) took 0.0000053000 seconds
+'factorial_iterative' with (28,) as the argument(s) took 0.0000042000 seconds
+'factorial_recursive' with (28,) as the argument(s) took 0.0000105000 seconds
+'factorial_iterative' with (29,) as the argument(s) took 0.0000121000 seconds
+'factorial_recursive' with (29,) as the argument(s) took 0.0000137000 seconds
+'factorial_iterative' with (30,) as the argument(s) took 0.0000109000 seconds
+'factorial_recursive' with (30,) as the argument(s) took 0.0000137000 seconds
+'factorial_iterative' with (31,) as the argument(s) took 0.0000109000 seconds
+'factorial_recursive' with (31,) as the argument(s) took 0.0000133000 seconds
+'factorial_iterative' with (32,) as the argument(s) took 0.0000114000 seconds
+'factorial_recursive' with (32,) as the argument(s) took 0.0000148000 seconds
+'factorial_iterative' with (33,) as the argument(s) took 0.0000123000 seconds
+'factorial_recursive' with (33,) as the argument(s) took 0.0000144000 seconds
+'factorial_iterative' with (34,) as the argument(s) took 0.0000129000 seconds
+'factorial_recursive' with (34,) as the argument(s) took 0.0000201000 seconds
+'factorial_iterative' with (35,) as the argument(s) took 0.0000119000 seconds
+'factorial_recursive' with (35,) as the argument(s) took 0.0000166000 seconds
+'factorial_iterative' with (36,) as the argument(s) took 0.0000159000 seconds
+'factorial_recursive' with (36,) as the argument(s) took 0.0000094000 seconds
+'factorial_iterative' with (37,) as the argument(s) took 0.0000113000 seconds
+'factorial_recursive' with (37,) as the argument(s) took 0.0000179000 seconds
+'factorial_iterative' with (38,) as the argument(s) took 0.0000143000 seconds
+'factorial_recursive' with (38,) as the argument(s) took 0.0000108000 seconds
+'factorial_iterative' with (39,) as the argument(s) took 0.0000105000 seconds
+'factorial_recursive' with (39,) as the argument(s) took 0.0000109000 seconds
+'factorial_iterative' with (40,) as the argument(s) took 0.0000107000 seconds
+'factorial_recursive' with (40,) as the argument(s) took 0.0000112000 seconds
+'factorial_iterative' with (41,) as the argument(s) took 0.0000100000 seconds
+'factorial_recursive' with (41,) as the argument(s) took 0.0000142000 seconds
+'factorial_iterative' with (42,) as the argument(s) took 0.0000140000 seconds
+'factorial_recursive' with (42,) as the argument(s) took 0.0000116000 seconds
+'factorial_iterative' with (43,) as the argument(s) took 0.0000086000 seconds
+'factorial_recursive' with (43,) as the argument(s) took 0.0000157000 seconds
+'factorial_iterative' with (44,) as the argument(s) took 0.0000086000 seconds
+'factorial_recursive' with (44,) as the argument(s) took 0.0000181000 seconds
+'factorial_iterative' with (45,) as the argument(s) took 0.0000097000 seconds
+'factorial_recursive' with (45,) as the argument(s) took 0.0000155000 seconds
+'factorial_iterative' with (46,) as the argument(s) took 0.0000145000 seconds
+'factorial_recursive' with (46,) as the argument(s) took 0.0000152000 seconds
+'factorial_iterative' with (47,) as the argument(s) took 0.0000151000 seconds
+'factorial_recursive' with (47,) as the argument(s) took 0.0000158000 seconds
+'factorial_iterative' with (48,) as the argument(s) took 0.0000098000 seconds
+'factorial_recursive' with (48,) as the argument(s) took 0.0000092000 seconds
+'factorial_iterative' with (49,) as the argument(s) took 0.0000070000 seconds
+'factorial_recursive' with (49,) as the argument(s) took 0.0000185000 seconds
+'factorial_iterative' with (50,) as the argument(s) took 0.0000072000 seconds
+'factorial_recursive' with (50,) as the argument(s) took 0.0000092000 seconds
+'factorial_iterative' with (51,) as the argument(s) took 0.0000073000 seconds
+'factorial_recursive' with (51,) as the argument(s) took 0.0000096000 seconds
+'factorial_iterative' with (52,) as the argument(s) took 0.0000260000 seconds
+'factorial_recursive' with (52,) as the argument(s) took 0.0000245000 seconds
+'factorial_iterative' with (53,) as the argument(s) took 0.0000107000 seconds
+'factorial_recursive' with (53,) as the argument(s) took 0.0000147000 seconds
+'factorial_iterative' with (54,) as the argument(s) took 0.0000077000 seconds
+'factorial_recursive' with (54,) as the argument(s) took 0.0000158000 seconds
+'factorial_iterative' with (55,) as the argument(s) took 0.0000152000 seconds
+'factorial_recursive' with (55,) as the argument(s) took 0.0000197000 seconds
+'factorial_iterative' with (56,) as the argument(s) took 0.0000183000 seconds
+'factorial_recursive' with (56,) as the argument(s) took 0.0000158000 seconds
+'factorial_iterative' with (57,) as the argument(s) took 0.0000184000 seconds
+'factorial_recursive' with (57,) as the argument(s) took 0.0000246000 seconds
+'factorial_iterative' with (58,) as the argument(s) took 0.0000125000 seconds
+'factorial_recursive' with (58,) as the argument(s) took 0.0000143000 seconds
+'factorial_iterative' with (59,) as the argument(s) took 0.0000190000 seconds
+'factorial_recursive' with (59,) as the argument(s) took 0.0000239000 seconds
+'factorial_iterative' with (60,) as the argument(s) took 0.0000210000 seconds
+'factorial_recursive' with (60,) as the argument(s) took 0.0000258000 seconds
+'factorial_iterative' with (61,) as the argument(s) took 0.0000200000 seconds
+'factorial_recursive' with (61,) as the argument(s) took 0.0000282000 seconds
+'factorial_iterative' with (62,) as the argument(s) took 0.0000210000 seconds
+'factorial_recursive' with (62,) as the argument(s) took 0.0000248000 seconds
+'factorial_iterative' with (63,) as the argument(s) took 0.0000219000 seconds
+'factorial_recursive' with (63,) as the argument(s) took 0.0000248000 seconds
+'factorial_iterative' with (64,) as the argument(s) took 0.0000309000 seconds
+'factorial_recursive' with (64,) as the argument(s) took 0.0000287000 seconds
+'factorial_iterative' with (65,) as the argument(s) took 0.0000228000 seconds
+'factorial_recursive' with (65,) as the argument(s) took 0.0000275000 seconds
+'factorial_iterative' with (66,) as the argument(s) took 0.0000266000 seconds
+'factorial_recursive' with (66,) as the argument(s) took 0.0000309000 seconds
+'factorial_iterative' with (67,) as the argument(s) took 0.0000239000 seconds
+'factorial_recursive' with (67,) as the argument(s) took 0.0000530000 seconds
+'factorial_iterative' with (68,) as the argument(s) took 0.0000234000 seconds
+'factorial_recursive' with (68,) as the argument(s) took 0.0000251000 seconds
+'factorial_iterative' with (69,) as the argument(s) took 0.0000229000 seconds
+'factorial_recursive' with (69,) as the argument(s) took 0.0000248000 seconds
+'factorial_iterative' with (70,) as the argument(s) took 0.0000235000 seconds
+'factorial_recursive' with (70,) as the argument(s) took 0.0000255000 seconds
+'factorial_iterative' with (71,) as the argument(s) took 0.0000282000 seconds
+'factorial_recursive' with (71,) as the argument(s) took 0.0000134000 seconds
+'factorial_iterative' with (72,) as the argument(s) took 0.0000100000 seconds
+'factorial_recursive' with (72,) as the argument(s) took 0.0000317000 seconds
+'factorial_iterative' with (73,) as the argument(s) took 0.0000192000 seconds
+'factorial_recursive' with (73,) as the argument(s) took 0.0000197000 seconds
+'factorial_iterative' with (74,) as the argument(s) took 0.0000102000 seconds
+'factorial_recursive' with (74,) as the argument(s) took 0.0000258000 seconds
+'factorial_iterative' with (75,) as the argument(s) took 0.0000260000 seconds
+'factorial_recursive' with (75,) as the argument(s) took 0.0000285000 seconds
+'factorial_iterative' with (76,) as the argument(s) took 0.0000179000 seconds
+'factorial_recursive' with (76,) as the argument(s) took 0.0000280000 seconds
+'factorial_iterative' with (77,) as the argument(s) took 0.0000260000 seconds
+'factorial_recursive' with (77,) as the argument(s) took 0.0000338000 seconds
+'factorial_iterative' with (78,) as the argument(s) took 0.0000266000 seconds
+'factorial_recursive' with (78,) as the argument(s) took 0.0000305000 seconds
+'factorial_iterative' with (79,) as the argument(s) took 0.0000268000 seconds
+'factorial_recursive' with (79,) as the argument(s) took 0.0000292000 seconds
+'factorial_iterative' with (80,) as the argument(s) took 0.0000266000 seconds
+'factorial_recursive' with (80,) as the argument(s) took 0.0000519000 seconds
+'factorial_iterative' with (81,) as the argument(s) took 0.0000114000 seconds
+'factorial_recursive' with (81,) as the argument(s) took 0.0000314000 seconds
+'factorial_iterative' with (82,) as the argument(s) took 0.0000276000 seconds
+'factorial_recursive' with (82,) as the argument(s) took 0.0000305000 seconds
+'factorial_iterative' with (83,) as the argument(s) took 0.0000283000 seconds
+'factorial_recursive' with (83,) as the argument(s) took 0.0000289000 seconds
+'factorial_iterative' with (84,) as the argument(s) took 0.0000258000 seconds
+'factorial_recursive' with (84,) as the argument(s) took 0.0000308000 seconds
+'factorial_iterative' with (85,) as the argument(s) took 0.0000285000 seconds
+'factorial_recursive' with (85,) as the argument(s) took 0.0000304000 seconds
+'factorial_iterative' with (86,) as the argument(s) took 0.0000285000 seconds
+'factorial_recursive' with (86,) as the argument(s) took 0.0000259000 seconds
+'factorial_iterative' with (87,) as the argument(s) took 0.0000319000 seconds
+'factorial_recursive' with (87,) as the argument(s) took 0.0000338000 seconds
+'factorial_iterative' with (88,) as the argument(s) took 0.0000299000 seconds
+'factorial_recursive' with (88,) as the argument(s) took 0.0000185000 seconds
+'factorial_iterative' with (89,) as the argument(s) took 0.0000309000 seconds
+'factorial_recursive' with (89,) as the argument(s) took 0.0000299000 seconds
+'factorial_iterative' with (90,) as the argument(s) took 0.0000263000 seconds
+'factorial_recursive' with (90,) as the argument(s) took 0.0000327000 seconds
+'factorial_iterative' with (91,) as the argument(s) took 0.0000300000 seconds
+'factorial_recursive' with (91,) as the argument(s) took 0.0000319000 seconds
+'factorial_iterative' with (92,) as the argument(s) took 0.0000405000 seconds
+'factorial_recursive' with (92,) as the argument(s) took 0.0000442000 seconds
+'factorial_iterative' with (93,) as the argument(s) took 0.0000346000 seconds
+'factorial_recursive' with (93,) as the argument(s) took 0.0000357000 seconds
+'factorial_iterative' with (94,) as the argument(s) took 0.0000426000 seconds
+'factorial_recursive' with (94,) as the argument(s) took 0.0000438000 seconds
+'factorial_iterative' with (95,) as the argument(s) took 0.0000145000 seconds
+'factorial_recursive' with (95,) as the argument(s) took 0.0000281000 seconds
+'factorial_iterative' with (96,) as the argument(s) took 0.0000391000 seconds
+'factorial_recursive' with (96,) as the argument(s) took 0.0000400000 seconds
+'factorial_iterative' with (97,) as the argument(s) took 0.0000386000 seconds
+'factorial_recursive' with (97,) as the argument(s) took 0.0000365000 seconds
+'factorial_iterative' with (98,) as the argument(s) took 0.0000331000 seconds
+'factorial_recursive' with (98,) as the argument(s) took 0.0000344000 seconds
+'factorial_iterative' with (99,) as the argument(s) took 0.0000325000 seconds
+'factorial_recursive' with (99,) as the argument(s) took 0.0000341000 seconds
+'factorial_iterative' with (100,) as the argument(s) took 0.0000278000 seconds
+'factorial_recursive' with (100,) as the argument(s) took 0.0000344000 seconds

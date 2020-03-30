@@ -1,5 +1,6 @@
 import doctest
 import time
+import statistics
 
 
 def time_function(func):
@@ -23,7 +24,7 @@ def time_function(func):
         run_time = end_time - start_time
         print(f"Finished the function {func.__name__!r} in {run_time:.10f} seconds")
         with open('results.txt', 'a') as result_log:
-            result_log.write(f"{func.__name__!r} took {run_time:.10f} seconds\n")
+            result_log.write(f"{func.__name__!r} with {args} as the argument(s) took {run_time:.10f} seconds\n")
         return run_time
     return wrapper
 
@@ -86,13 +87,22 @@ def factorial_recursive(integer):
 def main():
     """
     Clear all text in a file and then log runtime information for two functions.
+
+    Will find the run-time ratios of the iterative factorial function and the recursive factorial function for
+    factorials in the range [1, 100], and then print out the mean ratio.
     """
     doctest.testmod()
     with open('results.txt', 'w') as result_log:
         result_log.truncate(0)
+    function_run_time_ratios = []
     for i in range(1, 101):
-        factorial_iterative(i)
-        factorial_recursive(i)
+        iterative_run_time = factorial_iterative(i)
+        recursive_run_time = factorial_recursive(i)
+        ratio = iterative_run_time/recursive_run_time
+        function_run_time_ratios.append(ratio)
+    average_ratio = statistics.mean(function_run_time_ratios)
+    print(f"On average, the iterative function is takes {average_ratio*100:.2f}% as much time to run compared to the "
+          f"recursive function.")
 
 
 if __name__ == "__main__":
