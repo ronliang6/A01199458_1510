@@ -54,37 +54,6 @@ def print_calorie_summary(food_information: dict):
           "Average Calories: %0.1f\n" % avg_calories)
 
 
-def print_information_summary(food_information: dict):
-    """
-    Print summary information about foods and their calories.
-
-    Print an alphabetically sorted list of foods and the calorie total as well as the mean.
-
-    :param food_information: a non-zero length dictionary of food items as keys (strings) and their respective
-    calories as values (integers).
-    :precondition: provide the function with an argument as defined by the PARAM statement above.
-    :postcondition: print an alphabetically sorted list of foods and the calorie total as well as the mean.
-
-    >>> print_information_summary({"ham": 50, "cheese": 20, "carrots": 10})
-    <BLANKLINE>
-    Food Items: ['carrots', 'cheese', 'ham']
-    Total Calories: 80 Average Calories: 26.7
-    <BLANKLINE>
-    >>> print_information_summary({"ham": 50})
-    <BLANKLINE>
-    Food Items: ['ham']
-    Total Calories: 50 Average Calories: 50.0
-    <BLANKLINE>
-    >>> print_information_summary({"ham": 0})
-    <BLANKLINE>
-    Food Items: ['ham']
-    Total Calories: 0 Average Calories: 0.0
-    <BLANKLINE>
-    """
-    print_food_summary(food_information)
-    print_calorie_summary(food_information)
-
-
 def main():
     """
     Add any number of user-prompted foods with calorie information to a initialized dictionary and print summary
@@ -105,7 +74,8 @@ def main():
     while new_item != "q":
         new_item_calories = int(input("Enter calories for " + new_item + ": "))
         calories[new_item] = new_item_calories
-        print_information_summary(calories)
+        print_food_summary(calories)
+        print_calorie_summary(calories)
         new_item = input("Enter food item to add, or 'q' to exit: ")
 
 
