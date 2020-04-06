@@ -56,6 +56,16 @@ def is_email(address: str) -> bool:
     False
     >>> is_email("bob.com")
     False
+    >>> is_email("bob.hello@com")
+    False
+    >>> is_email("bob_builder@gmail.com")
+    True
+    >>> is_email("bob@gmail.@@@@")
+    True
+    >>> is_email("bob@gmail.c.ca")
+    True
+    >>> is_email("bob@g-mail.com")
+    False
     """
     email_format = re.compile(r'^\w+@[a-zA-Z0-9]+[.].{2,4}$')
     match_object = email_format.search(address)
@@ -101,6 +111,8 @@ def is_nakamoto(name: str) -> bool:
     True
     >>> is_nakamoto("Naruto Uzumaki Nakamoto")
     False
+    >>> is_nakamoto("Naru-to Nakamoto")
+    False
     """
     nakamoto_name_regex = re.compile('^[A-Z][a-z]* Nakamoto$')
     match_object = nakamoto_name_regex.search(name)
@@ -130,6 +142,10 @@ def is_poker(hand: str) -> bool:
     >>> is_poker("a2a898q3kjq")
     False
     >>> is_poker("hello")
+    False
+    >>> is_poker("23461")
+    False
+    >>> is_poker("04aqt")
     False
     >>> is_poker("226qz")
     False
