@@ -3,6 +3,7 @@ from PIL import ImageTk, Image
 import requests
 import random
 import textwrap
+import time
 
 
 def print_nasa_explanation(data: dict):
@@ -61,11 +62,15 @@ def display_nasa_image(image):
 
 
 def main():
+    """
+    Print information about and display a random picture of the day from NASA's APOD API every five minutes.
+    """
     while True:
         nasa_response = nasa_query()
         print_nasa_explanation(nasa_response)
         nasa_image = requests.get(nasa_response['url'], stream=True)
         display_nasa_image(nasa_image)
+        time.sleep(270)
 
 
 if __name__ == "__main__":
