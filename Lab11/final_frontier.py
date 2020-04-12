@@ -57,6 +57,7 @@ def display_nasa_image(image):
     canvas = tk.Canvas(tkinter_gui, width=tk_img.width(), height=tk_img.height())
     canvas.create_image(0, 0, anchor='nw', image=tk_img)
     canvas.pack()
+    # Close the tkinter window after 30 seconds.
     tkinter_gui.after(30000, lambda: tkinter_gui.destroy())
     tkinter_gui.mainloop()
 
