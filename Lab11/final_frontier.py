@@ -15,6 +15,7 @@ def print_nasa_explanation(data: dict):
     :postcondition: print interesting information about the picture.
     """
     print(f'The image you see is titled: {data["title"]}.')
+    print(f'This is the image link: {data["url"]}')
     print(f'It is the picture of the day from {data["date"]}!')
     print('Here is some cool information about that image!\n')
     formatted_text = textwrap.wrap(data["explanation"], width=100)
@@ -24,7 +25,7 @@ def print_nasa_explanation(data: dict):
 
 def nasa_query() -> dict:
     """
-    Get, parse, and return a date-randomized response from the NASA APOD API.
+    Get, parse, and return a date-randomized image response from the NASA APOD API.
 
     :precondition: the NASA APOD API is fully functional. The API key remains valid.
     :postcondition: return an object as defined by the return statement below.
@@ -39,8 +40,9 @@ def nasa_query() -> dict:
     config = f'&date={year}-{month}-{day}'
     url = root + key + config
 
-    response = requests.get(url)
-    return response.json()
+    response = requests.get(url).json()
+    # If the response media-type is not an image, query again until an image is queried.
+    return response if response['media_type'] == 'image' else nasa_query()
 
 
 def display_nasa_image(image):
@@ -71,6 +73,7 @@ def main():
         print_nasa_explanation(nasa_response)
         nasa_image = requests.get(nasa_response['url'], stream=True)
         display_nasa_image(nasa_image)
+        # Wait 4 minutes 30 seconds before querying nasa again (five minutes if you add the tkinter gui duration)
         time.sleep(270)
 
 
